@@ -1,7 +1,10 @@
 # Nozama - Front End Client
 Team Project By:
-Aimee L Ramirez
-Will J Britton
+- Aimee L Ramirez
+- Will J Britton
+- Christian Mignacca
+- Ash Trull
+
 ## Introduction
 
 ## Deployed Links
