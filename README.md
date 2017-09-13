@@ -1,6 +1,6 @@
 # Nozama - Front End Client
 Team Project By:
-
+Aimee L Ramirez
 ## Introduction
 
 ## Deployed Links
