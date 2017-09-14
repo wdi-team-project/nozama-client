@@ -2,7 +2,7 @@
 
 const config = {
   apiOrigins: {
-    production: 'http://localhost:7165'
+    production: 'http://localhost:4741'
   }
 }
 
