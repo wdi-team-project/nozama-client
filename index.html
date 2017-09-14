@@ -1,27 +1,165 @@
 <!DOCTYPE html>
 <html>
-    <head>
-      <title>Peach Produce</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <!-- Do not add `link` tags-->
-      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<head>
+  <title>Peach Produce</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <!-- Do not add `script` tags-->
-      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
-      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
-    </head>
-    <body class="container-fluid">
-      <div class ="header-bar">
-      <h1>Peach</h1>
+  <!-- Do not add `link` tags-->
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" type="text/scss" href="./assets/styles/index.scss">
+  <link href="https://fonts.googleapis.com/css?family=Bungee+Shade|Dosis" rel="stylesheet">
+
+  <!-- Do not add `script` tags-->
+  <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+  <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+  <!-- TODO Add font scripts -->
+</head>
+
+<body class="container-fluid">
+  <!-- Header/nav bar-->
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <!-- TODO Add logo -->
+      </div>
+        <!-- User authorization -->
+      <div class="collapse navbar-collapse">
+  <button type="button" name="button">Create an Account</button>
+  <p>Already have an account? </p>
+  <button type="button" name="button">Sign in</button>
+<!-- Sign up modal -->
+  <div class="modal fade" tabindex="-1" role="dialog" id="sign-up-modal">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Create an Account</h4>
+      </div>
+      <div class="modal-body">
+        <form class="user-signup">
+          <input name="credentials[email]" type="text" value="" placeholder="Email">
+          <input name="credentials[password]" type="password" value="" placeholder="Password">
+          <input name="credentials[password_confirmation]" type="password" value="" placeholder="Re-enter Password">
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="submit" name="submit" class="btn btn-default" value="Sign Up!" id="create-button">Create Account</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<!-- Sign in modal -->
+<div class="modal fade" tabindex="-1" role="dialog" id="sign-up-modal">
+<div class="modal-dialog" role="document">
+  <div class="modal-content">
+    <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <h4 class="modal-title">Sign in</h4>
     </div>
-      <h2>The sweetest experience in online groceries</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-      eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-      minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-      ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-      est laborum.</p>
-    </body>
+    <div class="modal-body">
+      <form class="user-login" id="user-login">
+        <input name="credentials[email]" type="text" value="" placeholder="Email">
+        <input name="credentials[password]" type="password" value="" placeholder="Password">
+      </form>
+    </div>
+    <div class="modal-footer">
+      <button type="submit" name="submit" class="btn btn-default" value="Sign In!" id="sign-in-button">Sign In</button>
+    </div>
+  </div><!-- /.modal-content -->
+</div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<!-- Logout form -->
+      <form class="user-logout" id="user-logout">
+        <button type="submit" value="Sign Out!" class="btn btn-default" id="sign-out-button">Sign Out</button>
+      </form>
+<!-- Change password form -->
+      <form class="change-password" id="change-pw">
+        <input name="credentials[email]" type="text" value="" placeholder="Email">
+        <input name="credentials[password]" type="password" value="" placeholder="Password">
+        <input name="credentials[newpassword]" type="password" value="" placeholder="New Password">
+        <button type="submit" value="Change Password" class="btn btn-default" id="change-pw-button">Change Password</button>
+      </form>
+<!-- Product search -->
+      <form class="product-search" id="product-search-form">
+        <input name="search-field" type="text" value="" placeholder="Search the store">
+      </form>
+    </div>
+  </div>
+</nav>
+    <h1>Peach</h1>
+    <h2>The sweetest experience in online groceries</h2>
+
+
+  </div>
+
+  <!-- Body of landing page  -->
+  <a href="https://imgur.com/dC3F6tY"><img src="https://i.imgur.com/dC3F6tY.jpg?1" title="source: imgur.com" /></a>
+  <!-- TODO Add feature product carousel -->
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+    dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  <!-- TODO Add grid structure for product icons -->
+  <div class="container-fluid" id="product-grid">
+    <!-- First row -->
+    <div class="row">
+      <!-- First item -->
+      <div class="col-sm-3">
+        <a href="https://imgur.com/ky1mSYY"><img class="product-image" src="https://i.imgur.com/ky1mSYY.jpg?1" title="source: imgur.com" /></a>
+        <!-- Product description nested column -->
+        <div class="col-md-3">
+          <div class="row">
+            <div class="col-md-12">
+              <h4>Peach</h4>
+            </div>
+          </div> <!-- end row-->
+          <div class="row">
+            <div class="col-md-12">
+              <button class="btn btn-lg btn-brand btn-full-width">Add to Cart</button>
+            </div>
+          </div> <!-- end row-->
+       </div> <!-- end nest -->
+    </div> <!-- end item -->
+    <!-- Second item -->
+    <div class="col-sm-3">
+<a href="https://imgur.com/ky1mSYY"><img class="product-image" src="https://i.imgur.com/ky1mSYY.jpg?1" title="source: imgur.com" /></a>
+<!-- Product description nested column -->
+      <div class="col-md-3">
+        <div class="row">
+          <div class="col-md-12">
+            <h4>Peach</h4>
+          </div>
+        </div> <!-- end row-->
+        <div class="row">
+          <div class="col-md-12">
+            <button class="btn btn-lg btn-brand btn-full-width">Add to Cart</button>
+          </div>
+        </div> <!-- end row-->
+     </div> <!-- end nest -->
+  </div> <!-- end item -->
+  <!-- Third item -->
+  <div class="col-sm-3">
+    <a href="https://imgur.com/ky1mSYY"><img class="product-image" src="https://i.imgur.com/ky1mSYY.jpg?1" title="source: imgur.com" /></a>
+    <!-- Product description nested column -->
+    <div class="col-md-3">
+      <div class="row">
+        <div class="col-md-12">
+          <h4>Peach</h4>
+        </div>
+      </div> <!-- end row-->
+      <div class="row">
+        <div class="col-md-12">
+          <button class="btn btn-lg btn-brand btn-full-width">Add to Cart</button>
+        </div>
+      </div> <!-- end row-->
+   </div> <!-- end nest -->
+</div> <!-- end item -->
+
+  </div> <!-- end entire first product row-->
+</div>
+  <!-- Footer of landing page -->
+  <!-- TODO Add awesome font icons -->
+  <!-- TODO Add copyright info -->
+  <!-- TODO Add contact info -->
+</body>
+
 </html>
