@@ -44,7 +44,7 @@ const signOutFail = (error) => {
 
 const changePasswordSuccess = (data) => {
   console.log('ui.js changePasswordSuccess')
-  $('login-prompt').text('Password successfully changed. Signed in as' + data.user.email)
+  $('login-prompt').text('Password successfully changed. Signed in as' + app.user.email)
 }
 
 const changePasswordFail = (error) => {

@@ -57,6 +57,12 @@ const changePassword = (data) => {
     method: 'PATCH',
     headers: {
       Authorization: 'Token token=' + app.user.token
+    },
+    data: {
+      'passwords': {
+        'old': data.credentials.password,
+        'new': data.credentials.newpassword
+      }
     }
   })
 }
