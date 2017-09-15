@@ -9,11 +9,12 @@ $(() => {
 })
 
 $(() => {
-$('#sign-up-modal').hide()
-$('#sign-in-modal').hide()
-$('#user-signout').hide()
-$('#change-pw').hide()
+// $('#sign-up-modal').hide()
+// $('#sign-in-modal').hide()
+// $('#user-signout').hide()
+// $('#change-pw').hide()
 })
 
+$
 $('user-signup').on('submit', authEvents.onSignUp)
 $('user-signin').on('submit', authEvents.onSignIn)
