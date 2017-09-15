@@ -7,15 +7,41 @@ const produce = require('./produce/api.js')
 
 $(() => {
   setAPIOrigin(location, config)
+
+  $('.user-signup').hide()
+  $('.user-signin').hide()
+  $('.user-signout').hide()
+  $('#show-change-pw').hide()
+  $('.change-password').hide()
+  $('#show-my-cart').hide()
 })
 
-$(() => {
-// $('#sign-up-modal').hide()
-// $('#sign-in-modal').hide()
-// $('#user-signout').hide()
-// $('#change-pw').hide()
-  $('.productBtn').on('load', produce.getProduct())
+
+
+$('.productBtn').on('load', produce.getProduct())
+
+$('#show-signup').click(function () {
+  $('.user-signup').show()
+  $('#show-signin').hide()
+  $('#show-signup').hide()
+  $('#already-prompt').hide()
+})
+
+$('#show-signin').click(function () {
+  $('.user-signin').show()
+  $('#show-signin').hide()
+  $('#show-signup').hide()
+  $('#already-prompt').hide()
+})
+
+$('#show-change-pw').click(function () {
+  $('.change-password').show()
+  $('.user-signout').hide()
+  $('#show-my-cart').hide()
 })
 
 $('.user-signup').on('submit', authEvents.onSignUp)
 $('.user-signin').on('submit', authEvents.onSignIn)
+$('.user-signout').on('submit', authEvents.onSignOut)
+// $('#show-change-pw')
+$('.change-password').on('submit', authEvents.onChangePassword)
