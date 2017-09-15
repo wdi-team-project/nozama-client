@@ -44,5 +44,4 @@ const signIn = function (data) {
 module.exports = {
   signUp,
   signIn
-
 }

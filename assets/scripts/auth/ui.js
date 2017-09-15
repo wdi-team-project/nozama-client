@@ -1,6 +1,8 @@
 'use strict'
 const app = require('../app.js')
 
+
+
 // POST (signup)
 const signUpSuccess = (data) => {
   app.user = data.user
