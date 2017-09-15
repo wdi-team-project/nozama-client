@@ -13,10 +13,19 @@ const getProduct = function (data) {
     dataType: 'json',
     success: function (response, textStatus, jqXhr) {
       const product = response.products
-      console.log(product)
-      // for (let i = 0; i < product.length(); i++) {
-      //   $('#productList').append('<li>' + product + '</li>')
-      // }
+      // console.log(product.length)
+      let count = 0
+      for (let i = 0; i < product.length; i++) {
+        const title = product[i].title
+        const price = product[i].price
+        const img = product[i].imageLink
+        count++
+        if (count % 4 === 0) {
+          $('#productList').append('<li>' + title + ' ' + price + '  ' + img + '  ' + '</li><br><br>')
+        } else {
+          $('#productList').append('<li>' + title + ' ' + price + '  ' + img + '  ' + '</li>')
+        }
+      }
     }
   })
 }
