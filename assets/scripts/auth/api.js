@@ -1,10 +1,12 @@
 'use strict'
+const app = require('../app.js')
+const config = require('../config.js')
 
 // POST (signup)
 const signUp = function (data) {
   console.log(data)
   return $.ajax({
-    url: app.host + '/sign-up'
+    url: app.host + '/sign-up',
     headers: {'header': 'Content-Type: application/json'},
     method: 'POST',
     data: {
@@ -20,8 +22,8 @@ const signUp = function (data) {
 // GET (signin)
 const signIn = function (data) {
   console.log(data)
-  return $.ajax9{
-    url: app.host + '/sign-in'
+  return $.ajax({
+    url: app.host + '/sign-in',
     headers: {'header': 'Content-Type: application/json'},
     method: 'POST',
     data: {
@@ -30,7 +32,7 @@ const signIn = function (data) {
         'password': data.credentials.password
       }
     }
-  }
+  })
 }
 
 // DELETE (signout)
@@ -40,6 +42,7 @@ const signIn = function (data) {
 
 
 module.exports = {
-  signUp
+  signUp,
+  signIn
 
 }

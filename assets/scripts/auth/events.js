@@ -1,7 +1,11 @@
 'use strict'
+const api = require('./api.js')
+const getFormFields = require('../../../lib/get-form-fields.js')
+const ui = require('./ui.js')
 
 // POST (ash - signup)
 const onSignUp = function (event) {
+  console.log('onSignUp1')
   event.preventDefault()
   console.log('onSignUp')
   const data = getFormFields(event.target)
@@ -11,7 +15,7 @@ const onSignUp = function (event) {
 }
 
 // GET (ash - signin)
-const onSignin = function (event) {
+const onSignIn = function (event) {
   event.preventDefault()
   console.log('onSignIn')
   const data = getFormFields(event.target)
@@ -27,6 +31,7 @@ const onSignin = function (event) {
 
 
 module.exports = {
-  onSignUp
+  onSignUp,
+  onSignIn
 
 }

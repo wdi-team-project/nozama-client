@@ -16,5 +16,5 @@ $(() => {
 })
 
 $
-$('user-signup').on('submit', authEvents.onSignUp)
-$('user-signin').on('submit', authEvents.onSignIn)
+$('.user-signup').on('submit', authEvents.onSignUp)
+$('.user-signin').on('submit', authEvents.onSignIn)

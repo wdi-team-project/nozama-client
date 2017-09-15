@@ -1,4 +1,5 @@
 'use strict'
+const app = require('../app.js')
 
 // POST (signup)
 const signUpSuccess = (data) => {
@@ -34,5 +35,7 @@ const signInFail = (error) => {
 
 module.exports = {
   signUpSuccess,
-  signUpFail
+  signUpFail,
+  signInSuccess,
+  signInFail
 }
