@@ -36,13 +36,41 @@ const signIn = function (data) {
 }
 
 // DELETE (signout)
-
+const signOut = (data) => {
+  console.log(data)
+  return $.ajax({
+    url: app.host + '/sign-out/' + app.user.id,
+    method: 'DELETE',
+    headers: {
+      Authorization: 'Token token=' + app.user.token
+    }
+  })
+}
 
 // PATCH (changepw)
-
+const changePassword = (data) => {
+  console.log(app.user)
+  console.log(app.user.token)
+  console.log(data)
+  return $.ajax({
+    url: app.host + '/change-password/' + app.user.id,
+    method: 'PATCH',
+    headers: {
+      Authorization: 'Token token=' + app.user.token
+    },
+    data: {
+      'passwords': {
+        'old': data.credentials.password,
+        'new': data.credentials.newpassword
+      }
+    }
+  })
+}
 
 module.exports = {
   signUp,
-  signIn
+  signIn,
+  signOut,
+  changePassword
 
 }

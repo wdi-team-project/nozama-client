@@ -29,9 +29,9 @@
 <!-- User authorization ------------------------->
       <div class="collapse navbar-collapse">
         <h6 id="login-prompt">Log in to get shopping!</h6>
-        <button type="button" name="button">Create an Account</button>
-        <p>Already have an account? </p>
-        <button type="button" name="button">Sign in</button>
+        <button type="button" name="show-signup-button" id="show-signup">Create an Account</button>
+        <p id="already-prompt">Already have an account? </p>
+        <button type="button" name="show-signin-button" id="show-signin">Sign in</button>
 <!-- Sign up modal ------------------------->
         <!-- <div class="modal fade" tabindex="-1" role="dialog" id="sign-up-modal">
           <div class="modal-dialog" role="document">
@@ -85,12 +85,16 @@
           <button type="submit" value="Sign Out!" class="btn btn-default" id="sign-out-button">Sign Out</button>
         </form>
 <!-- Change password form ------------------------->
+<button type="button" class="btn btn-default" id="show-change-pw">Change Password</button>
         <form class="change-password" id="change-pw">
           <input name="credentials[email]" type="text" value="" placeholder="Email">
           <input name="credentials[password]" type="password" value="" placeholder="Password">
           <input name="credentials[newpassword]" type="password" value="" placeholder="New Password">
           <button type="submit" value="Change Password" class="btn btn-default" id="change-pw-button">Change Password</button>
         </form>
+<!-- Show shopping cart ------------------------->
+<button type="button" class="btn btn-default" id="show-my-cart">My Cart</button>
+
 <!-- Product search ------------------------->
         <form class="product-search" id="product-search-form">
           <input name="search-field" type="text" value="" placeholder="Search the store">
