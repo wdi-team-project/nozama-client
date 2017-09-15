@@ -44,6 +44,10 @@ const onChangePassword = function (event) {
     .fail(ui.changePasswordFail)
 }
 
+
+
+
+
 module.exports = {
   onSignUp,
   onSignIn,

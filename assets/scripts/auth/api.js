@@ -72,5 +72,4 @@ module.exports = {
   signIn,
   signOut,
   changePassword
-
 }

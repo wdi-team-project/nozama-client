@@ -3,6 +3,7 @@
 const setAPIOrigin = require('../../lib/set-api-origin')
 const config = require('./config')
 const authEvents = require('./auth/events.js')
+const produce = require('./produce/api.js')
 
 $(() => {
   setAPIOrigin(location, config)
@@ -14,6 +15,10 @@ $(() => {
   $('.change-password').hide()
   $('#show-my-cart').hide()
 })
+
+
+
+$('.productBtn').on('load', produce.getProduct())
 
 $('#show-signup').click(function () {
   $('.user-signup').show()

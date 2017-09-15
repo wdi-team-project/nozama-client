@@ -13,6 +13,13 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 
 body {
   padding: 0 0 10% 0;
+  text-align: center;
+}
+
+ul {
+  list-style-type: none;
+  display: block;
+  display: inline;
 }
 
 h1 {
@@ -42,7 +49,7 @@ h4 {
 i {
   color: #B22222;
   margin: 0;
-  padding: 2%;
+  padding: 2% 0;
 }
 
 .footer {
@@ -52,4 +59,20 @@ i {
 .name {
   font-weight: 700;
   color: #B22222;
+}
+
+.productListed {
+  width: 10em;
+}
+
+.productUI {
+
+}
+
+#productList {
+  text-align: center;
+}
+
+#productContainer {
+  text-align: center;
 }
