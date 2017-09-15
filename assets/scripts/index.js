@@ -8,13 +8,13 @@ $(() => {
   setAPIOrigin(location, config)
 })
 
-$(() => {
 // $('#sign-up-modal').hide()
 // $('#sign-in-modal').hide()
 // $('#user-signout').hide()
 // $('#change-pw').hide()
-})
 
-$
 $('.user-signup').on('submit', authEvents.onSignUp)
 $('.user-signin').on('submit', authEvents.onSignIn)
+$('.user-signout').on('submit', authEvents.onSignOut)
+// $('#show-change-pw')
+$('.change-password').on('submit', authEvents.onChangePassword)

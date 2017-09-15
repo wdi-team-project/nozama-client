@@ -10,8 +10,8 @@ const onSignUp = function (event) {
   console.log('onSignUp')
   const data = getFormFields(event.target)
   api.signUp(data)
-  .done(ui.signUpSuccess)
-  .fail(ui.signUpFail)
+    .done(ui.signUpSuccess)
+    .fail(ui.signUpFail)
 }
 
 // GET (ash - signin)
@@ -34,10 +34,20 @@ const onSignOut = function (event) {
 }
 
 // PATCH (will - changepw)
+const onChangePassword = function (event) {
+  event.preventDefault()
+  console.log('onChangePassword')
+  const data = getFormFields(event.target)
+  console.log(data)
+  api.changePassword(data)
+    .done(ui.changePasswordSuccess)
+    .fail(ui.changePasswordFail)
+}
 
 module.exports = {
   onSignUp,
   onSignIn,
-  onSignOut
+  onSignOut,
+  onChangePassword
 
 }

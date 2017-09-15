@@ -32,7 +32,7 @@ const signInFail = (error) => {
 const signOutSuccess = (data) => {
   app.user = null
   console.log(data)
-  console.log('Successfully signed out!')
+  console.log('ui.js signOutSuccess')
   $('login-prompt').text('Log in to get shopping!')
 }
 
@@ -42,11 +42,22 @@ const signOutFail = (error) => {
 
 // PATCH (changepw)
 
+const changePasswordSuccess = (data) => {
+  console.log('ui.js changePasswordSuccess')
+  $('login-prompt').text('Password successfully changed. Signed in as' + data.user.email)
+}
+
+const changePasswordFail = (error) => {
+  console.error(error)
+}
+
 module.exports = {
   signUpSuccess,
   signUpFail,
   signInSuccess,
   signInFail,
   signOutSuccess,
-  signOutFail
+  signOutFail,
+  changePasswordSuccess,
+  changePasswordFail
 }
