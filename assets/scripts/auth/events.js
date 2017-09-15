@@ -20,18 +20,24 @@ const onSignIn = function (event) {
   console.log('onSignIn')
   const data = getFormFields(event.target)
   api.signIn(data)
-  .done(ui.signInSuccess)
-  .fail(ui.signInFail)
+    .done(ui.signInSuccess)
+    .fail(ui.signInFail)
 }
 
 // DELETE (will - signout)
-
+const onSignOut = function (event) {
+  event.preventDefault()
+  console.log('onSignOut')
+  api.signOut()
+    .done(ui.signOutSuccess)
+    .fail(ui.signOutSuccess)
+}
 
 // PATCH (will - changepw)
 
-
 module.exports = {
   onSignUp,
-  onSignIn
+  onSignIn,
+  onSignOut
 
 }

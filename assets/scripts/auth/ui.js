@@ -29,7 +29,16 @@ const signInFail = (error) => {
 }
 
 // DELETE (signout)
+const signOutSuccess = (data) => {
+  app.user = null
+  console.log(data)
+  console.log('Successfully signed out!')
+  $('login-prompt').text('Log in to get shopping!')
+}
 
+const signOutFail = (error) => {
+  console.error(error)
+}
 
 // PATCH (changepw)
 
@@ -37,5 +46,7 @@ module.exports = {
   signUpSuccess,
   signUpFail,
   signInSuccess,
-  signInFail
+  signInFail,
+  signOutSuccess,
+  signOutFail
 }

@@ -36,13 +36,23 @@ const signIn = function (data) {
 }
 
 // DELETE (signout)
-
+const signOut = (data) => {
+  console.log(data)
+  return $.ajax({
+    url: app.host + '/sign-out/' + app.user.id,
+    method: 'DELETE',
+    headers: {
+      Authorization: 'Token token=' + app.user.token
+    }
+  })
+}
 
 // PATCH (changepw)
 
 
 module.exports = {
   signUp,
-  signIn
+  signIn,
+  signOut
 
 }
