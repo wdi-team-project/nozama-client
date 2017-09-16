@@ -84,12 +84,12 @@ h2 {
   font-weight: bold;
 }
 
-// h3 {
-//   font-family: "Dosis";
-//   font-size: 24px;
-//   color: #10621e;
-//   text-align: center;
-// }
+h3 {
+  font-family: "Dosis";
+  font-size: 24px;
+  color: $secondary;
+  text-align: center;
+}
 
 h4 {
   font-family: $sub-font;
@@ -115,11 +115,20 @@ i {
 }
 
 .productListed {
-  width: 10em;
+  width: 100%;
+  height: 150px;
+  font-size: 24px;
+  color: #10621e;
 }
 
-.productUI {
+.productDisplay {
+  font-size: 16px;
+  font-weight: 700;
+}
 
+productTitle {
+  font-size: 24px;
+  font-weight: 700;
 }
 
 #productList {

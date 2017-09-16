@@ -21,9 +21,9 @@ const getProduct = function (data) {
         const img = product[i].imageLink
         count++
         if (count % 4 === 0) {
-          $('#productList').append('<div class="row"><div class="col-xs-2 center"><img class="productListed" src="' + img + '">  ' + title + ' ' + price + '  ' + '</div></div>')
+          $('#productList').append('<div class="col-md-1"></div><div class="col-md-2 center"><h3>' + title + '</h3><br><img class="productListed" src="' + img + '">  ' + '<br><p class="productDisplay">$ ' + price + '  ' + '</p></div><br><br>')
         } else {
-          $('#productList').append('<div class="productUI col-xs-2 center"><img class="productListed col-xs-2 center" src="' + img + '">  ' + title + ' ' + price + '  ' + '</div><div class="col-xs-1></div>')
+          $('#productList').append('<div class="col-md-1"></div><div class="col-md-2 center"><h3>' + title + '</h3><br><img class="productListed" src="' + img + '">  ' + '<br><p class="productDisplay">$ ' + price + '  ' + '</p></div>')
         }
       }
     }
