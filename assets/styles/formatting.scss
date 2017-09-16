@@ -1,5 +1,6 @@
 @import './colors';
 
+
 .container-fluid {
   text-align: center;
 }
@@ -10,7 +11,8 @@
 }
 
 body {
-  padding: 0 0 10% 0;
+  background-color: $primary;
+  padding: 0 0 10%;
   text-align: center;
 }
 
@@ -20,22 +22,71 @@ ul {
   display: inline;
 }
 
+#header-container {
+  background-color: $white;
+  border-radius: 20px;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+  padding-top: 10px;
+}
+
+#user-action-container {
+  background-color: $secondary;
+  border-radius: 20px;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+  padding-top: 10px;
+}
+
+#landing-image {
+  border-radius: 10px;
+  border: 20px solid $tertiary;
+  margin-bottom: 35px;
+  width: 100%;
+}
+
+.btn-success {
+  background-color: $primary;
+  color: $white;
+  border-radius: 20px;
+  border: 0;
+  padding: 5px;
+  margin-bottom: 10px;
+  font-weight: bold;
+
+}
+
+.navbar {
+  background-color: $secondary;
+  border: 0;
+  margin-top: 10px;
+}
+
 h1 {
   font-family: "Dosis";
   font-size: 55px;
   text-align: center;
-  background-color: #fff;
-  color: #8c2f5e;
-  padding: 5px;
+  color: $secondary;
   clear: both;
+  margin: 0;
+  font-weight: bold;
 }
 
-h3 {
+h2 {
   font-family: "Dosis";
-  font-size: 24px;
-  color: #10621e;
+  font-size: 36px;
+  color: $secondary;
   text-align: center;
+  font-style: italic;
+  font-weight: bold;
 }
+
+// h3 {
+//   font-family: "Dosis";
+//   font-size: 24px;
+//   color: #10621e;
+//   text-align: center;
+// }
 
 h4 {
   font-size: 24px;
@@ -51,7 +102,7 @@ i {
 }
 
 .footer {
-  background-color: #ffb26d;
+  background-color: $secondary;
 }
 
 .name {
