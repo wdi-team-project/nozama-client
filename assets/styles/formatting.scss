@@ -1,4 +1,5 @@
 @import './colors';
+@import './typography';
 
 
 .container-fluid {
@@ -18,7 +19,6 @@ body {
 
 ul {
   list-style-type: none;
-  display: block;
   display: inline;
 }
 
@@ -63,7 +63,7 @@ ul {
 }
 
 h1 {
-  font-family: "Dosis";
+  font-family: $header-font;
   font-size: 55px;
   text-align: center;
   color: $secondary;
@@ -73,7 +73,7 @@ h1 {
 }
 
 h2 {
-  font-family: "Dosis";
+  font-family: $sub-font;
   font-size: 36px;
   color: $secondary;
   text-align: center;
