@@ -46,6 +46,7 @@
               <!-- </div> -->
               <!-- <div class="modal-body"> -->
                 <form class="user-signup">
+                    <h4>Sign Up</h4>
                   <input name="credentials[email]" type="text" value="" placeholder="Email">
                   <input name="credentials[password]" type="password" value="" placeholder="Password">
                   <input name="credentials[password_confirmation]" type="password" value="" placeholder="Re-enter Password">
@@ -70,6 +71,7 @@
               </div> -->
               <!-- <div class="modal-body"> -->
                 <form class="user-signin" id="user-signin">
+                  <h4>Sign In</h4>
                   <input name="credentials[email]" type="text" value="" placeholder="Email">
                   <input name="credentials[password]" type="password" value="" placeholder="Password">
                   <button class="btn-success" type="submit" name="submit" value="Sign In!" id="sign-in-button">Sign In</button>
@@ -86,11 +88,13 @@
         <!-- /.modal -->
 <!-- Logout form ------------------------->
         <form class="user-signout" id="user-signout">
+          <h4>Sign Out</h4>
           <button class="btn-success" type="submit" value="Sign Out!" id="sign-out-button">Sign Out</button>
         </form>
 <!-- Change password form ------------------------->
 <button class="btn-success" type="button" id="show-change-pw">Change Password</button>
         <form class="change-password" id="change-pw">
+          <h4>Change Password</h4>
           <input name="credentials[password]" type="password" value="" placeholder="Password">
           <input name="credentials[newpassword]" type="password" value="" placeholder="New Password">
           <button class="btn-success" type="submit" value="Change Password" id="change-pw-button">Change Password</button>
@@ -111,9 +115,11 @@
 </div>
   <!-- TODO Add feature product carousel -->
   <!-- TODO Add grid structure for product icons -->
-<div id="productContainer">
+
+<div class ="productBorder" id="productContainer">
   <!-- <div class="col-md-2"></div> -->
-    <div id="productList" class="col-md-12"></div>
+    <div id="productList" class="col-md-12"></div></div>
+
   <!-- <div class="col-md-2"></div> -->
 </div>
 <div class="footer navbar-fixed-bottom">
