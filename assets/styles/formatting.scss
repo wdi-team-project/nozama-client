@@ -1,5 +1,4 @@
 @import './colors';
-@import './typography.scss';
 
 
 .container-fluid {
@@ -28,17 +27,15 @@ ul {
   border-radius: 20px;
   padding-bottom: 10px;
   margin-bottom: 15px;
-  padding: 10px 60px 10px 10px;
+  padding-top: 10px;
 }
 
-
 #user-action-container {
-  background-color: #fff;
+  background-color: $secondary;
   border-radius: 20px;
   padding-bottom: 10px;
   margin-bottom: 15px;
   padding-top: 10px;
-
 }
 
 #landing-image {
@@ -66,18 +63,18 @@ ul {
 }
 
 h1 {
-  font-family: $header-font;
+  font-family: "Dosis";
   font-size: 55px;
   text-align: center;
-  color: #000;
+  color: $secondary;
   clear: both;
   margin: 0;
   font-weight: bold;
 }
 
 h2 {
-  font-family: $tagline-font;
-  font-size: 48px;
+  font-family: "Dosis";
+  font-size: 36px;
   color: $secondary;
   text-align: center;
   font-style: italic;
@@ -92,7 +89,6 @@ h3 {
 }
 
 h4 {
-  font-family: $sub-font;
   font-size: 24px;
   color: #10621e;
 }
@@ -100,7 +96,7 @@ h4 {
 /* Footer */
 
 i {
-  color: #B22222;
+  color: $primary;
   margin: 0;
   padding: 2% 0;
 }
@@ -111,7 +107,7 @@ i {
 
 .name {
   font-weight: 700;
-  color: #B22222;
+  color: $primary;
 }
 
 .productListed {
@@ -126,9 +122,12 @@ i {
   font-weight: 700;
 }
 
-productTitle {
-  font-size: 24px;
-  font-weight: 700;
+.right {
+  text-align: right;
+}
+
+#shopBtn {
+  background-color: $white;
 }
 
 #productList {
