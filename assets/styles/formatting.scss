@@ -26,8 +26,8 @@ ul {
   background-color: $white;
   border-radius: 20px;
   padding-bottom: 10px;
-  margin-bottom: 15px;
-  padding-top: 10px;
+  border: 5px solid $primary;
+  margin: 6% 10px 0 30px;
 }
 
 #user-action-container {
@@ -36,6 +36,8 @@ ul {
   padding-bottom: 10px;
   margin-bottom: 15px;
   padding-top: 10px;
+  border: 5px solid $white;
+
 }
 
 #landing-image {
@@ -63,12 +65,12 @@ ul {
 }
 
 h1 {
-  font-family: "Dosis";
+  font-family: $header-font;
   font-size: 55px;
   text-align: center;
   color: $secondary;
   clear: both;
-  margin: 0;
+  margin-top: 10px;
   font-weight: bold;
 }
 
@@ -79,6 +81,7 @@ h2 {
   text-align: center;
   font-style: italic;
   font-weight: bold;
+  margin: 0 10px;
 }
 
 h3 {
