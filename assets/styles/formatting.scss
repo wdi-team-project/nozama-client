@@ -1,0 +1,76 @@
+@import './colors';
+
+.container-fluid {
+  text-align: center;
+}
+
+.product-image {
+  height: 60px;
+  width: 60px;
+}
+
+body {
+  padding: 0 0 10% 0;
+  text-align: center;
+}
+
+ul {
+  list-style-type: none;
+  display: block;
+  display: inline;
+}
+
+h1 {
+  font-family: "Dosis";
+  font-size: 55px;
+  text-align: center;
+  background-color: #fff;
+  color: #8c2f5e;
+  padding: 5px;
+  clear: both;
+}
+
+h3 {
+  font-family: "Dosis";
+  font-size: 24px;
+  color: #10621e;
+  text-align: center;
+}
+
+h4 {
+  font-size: 24px;
+  color: #10621e;
+}
+
+/* Footer */
+
+i {
+  color: #B22222;
+  margin: 0;
+  padding: 2% 0;
+}
+
+.footer {
+  background-color: #ffb26d;
+}
+
+.name {
+  font-weight: 700;
+  color: #B22222;
+}
+
+.productListed {
+  width: 10em;
+}
+
+.productUI {
+
+}
+
+#productList {
+  text-align: center;
+}
+
+#productContainer {
+  text-align: center;
+}
