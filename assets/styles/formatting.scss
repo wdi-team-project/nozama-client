@@ -66,16 +66,16 @@ h1 {
   font-family: $header-font;
   font-size: 55px;
   text-align: center;
-  color: $secondary;
+  color: $primary;
   clear: both;
   margin: 0;
   font-weight: bold;
 }
 
 h2 {
-  font-family: $sub-font;
+  font-family: $tagline-font;
   font-size: 36px;
-  color: $secondary;
+  color: $primary;
   text-align: center;
   font-style: italic;
   font-weight: bold;
