@@ -11,7 +11,7 @@
 
   <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
   <link rel="stylesheet" type="text/scss" href="./assets/styles/index.scss">
-  <link href="https://fonts.googleapis.com/css?family=Bungee+Shade|Dosis" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash|News+Cycle|PT+Sans+Narrow|Sacramento" rel="stylesheet">
 
   <!-- Do not add `script` tags-->
   <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
@@ -22,14 +22,16 @@
 <body class="container-fluid">
 <!-- Header/nav bar------------------------->
   <nav class="navbar navbar-default">
-    <div id="user-action-container">
     <div class="container-fluid">
       <div class="navbar-header">
         <!-- TODO Add logo -->
+        <div id="header-container">
+          <h1> { Peach } </h1>
+          <h2>The sweetest experience in online groceries</h2>
+        </div>
       </div>
 <!-- User authorization ------------------------->
-
-      <div class="collapse navbar-collapse">
+      <div class="navbar-auth" id="user-action-container">
         <h6 id="login-prompt">Log in to get shopping!</h6>
         <button class="btn-success"  type="button" name="show-signup-button" id="show-signup">Create an Account</button>
         <p id="already-prompt">Already have an account? </p>
@@ -89,7 +91,6 @@
 <!-- Change password form ------------------------->
 <button class="btn-success" type="button" id="show-change-pw">Change Password</button>
         <form class="change-password" id="change-pw">
-          <input name="credentials[email]" type="text" value="" placeholder="Email">
           <input name="credentials[password]" type="password" value="" placeholder="Password">
           <input name="credentials[newpassword]" type="password" value="" placeholder="New Password">
           <button class="btn-success" type="submit" value="Change Password" id="change-pw-button">Change Password</button>
@@ -98,17 +99,13 @@
 <button class="btn-success" type="button" id="show-my-cart">My Cart</button>
 
 <!-- Product search ------------------------->
+<div class="navbar-search"
         <form class="product-search" id="product-search-form">
           <input name="search-field" type="text" value="" placeholder="Search the store">
         </form>
-      </div>
-    </div>
     </div>
   </nav>
-  <div id="header-container">
-    <h1>Peach</h1>
-    <h2>The sweetest experience in online groceries</h2>
-  </div>
+</div>
   <!-- Body of landing page  -->
   <img id="landing-image" src="https://i.imgur.com/dC3F6tY.jpg?1" title="source: imgur.com" />
 </div>
