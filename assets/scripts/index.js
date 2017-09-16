@@ -16,8 +16,6 @@ $(() => {
   $('#show-my-cart').hide()
 })
 
-
-
 $('.productBtn').on('load', produce.getProduct())
 
 $('#show-signup').click(function () {
@@ -36,7 +34,7 @@ $('#show-signin').click(function () {
 
 $('#show-change-pw').click(function () {
   $('.change-password').show()
-  $('.user-signout').hide()
+  $('#show-change-pw').hide()
   $('#show-my-cart').hide()
 })
 
