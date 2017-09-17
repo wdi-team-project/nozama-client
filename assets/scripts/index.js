@@ -7,7 +7,7 @@ const produce = require('./produce/api.js')
 
 $(() => {
   setAPIOrigin(location, config)
-$('.carousel').carousel()
+  $('.carousel').carousel()
   $('.user-signup').hide()
   $('.user-signin').hide()
   $('.user-signout').hide()

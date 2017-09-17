@@ -10,9 +10,14 @@
   width: 60px;
 }
 
-.item {
+.carousel-inner {
   width: 100%;
   height: 200px;
+  position: center;
+}
+.divider {
+  border: .5px dotted $white;
+
 }
 
 body {
