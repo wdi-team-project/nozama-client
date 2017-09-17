@@ -21,15 +21,9 @@
 
 <body class="container-fluid">
 <!-- Header/nav bar------------------------->
-  <nav class="navbar navbar-default">
     <div class="container-fluid">
-      <div class="navbar-header">
         <!-- TODO Add logo -->
-        <div id="header-container">
-          <h1>Peach</h1>
-          <h2>The sweetest experience in online groceries</h2>
-        </div>
-      </div>
+
 <!-- User authorization ------------------------->
       <div class="navbar-auth" id="user-action-container">
         <h6 id="login-prompt">Log in to get shopping!</h6>
@@ -103,7 +97,7 @@
 <button class="btn-success" type="button" id="show-my-cart">My Cart</button>
 <br>
 <div class="dropdown right">
-  <button id="shopBtn" type="button" class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown"><i class="fa fa-shopping-cart fa-2x">  My Cart</i></button>
+  <button id="shopBtn" type="button" class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown"><i id="shopBtn" class="fa fa-shopping-cart fa-2x">  My Cart</i></button>
   <ul class="dropdown-menu dropdown-menu-right">
     <li><a href="#">HTML</a></li>
     <li><a href="#">CSS</a></li>
@@ -111,6 +105,11 @@
   </ul>
 </div>
   </nav>
+</div>
+
+<div id="header-container">
+  <h1>Peach</h1>
+  <h2>The sweetest experience in online groceries</h2>
 </div>
   <!-- Body of landing page  -->
   <img id="landing-image" src="https://i.imgur.com/dC3F6tY.jpg?1" title="source: imgur.com" />
