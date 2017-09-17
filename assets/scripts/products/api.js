@@ -36,6 +36,7 @@ const getProduct = function (data) {
 
 // Add Product to user Cart
 const addProduct = (title, price, data) => {
+  console.log('addProduct')
   return $.ajax({
     url: app.host + '/users/' + app.user.id,
     method: 'PATCH',
