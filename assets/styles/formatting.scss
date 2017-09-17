@@ -39,7 +39,7 @@ h3 {
 }
 
 h4 {
-  color: $blue;
+  color: $white;
   font-size: 24px;
 }
 
@@ -141,7 +141,7 @@ ul {
   width: 60%;
 }
 
-#cartBtn {
+#add-to-cart-btn {
   background-color: $secondary;
   border: 3px solid $tertiary;
   border-radius: 10px;
@@ -150,7 +150,7 @@ ul {
   width: 10em;
 }
 
-#cartBtn:hover {
+#add-to-cart-btn:hover {
   background-color: $primary;
   border: 3px solid $secondary;
   border-radius: 10px;
