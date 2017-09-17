@@ -18,11 +18,15 @@ const getProduct = function (data) {
         const price = product[i].price
         const img = product[i].imageLink
         $('#productList').append(
-          '<div class="productBorder col-md-2 center">' +
+          '<div id="" class="productBorder col-md-2 center">' +
+            '<div>' +
             '<h3 class="productTitle">' + title + '</h3>' + '<br>' +
+            '</div>' +
+            '<div>' +
             '<img class="productListed" src="' + img + '">' + '<br>' +
-            '<p class="productPrice"> $ ' + price + '</p>' +
-            '<button id="cartBtn" type="button class=btn center">Add to Cart</button>' +
+            '</div>' +
+            '<p class="productPrice">$ ' + price + '</p>' +
+            '<button id="' + 'cartBtn' + '"class="btn center">Add to Cart</button>' +
         '</div>'
         )
       }
