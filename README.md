@@ -1,26 +1,7 @@
 # Nozama - Front End Client
-Team Project By:
-- Aimee L Ramirez
-- Will J Britton
-- Christian Mignacca
-- Ash Trull
-
-## Introduction
-
-## Deployed Links
-
-- Deployed Client:
-
-- API Repo:
-
-## User Stories
-
-## Technologies Used
-# Nozama - Front End Client
-Normal Text
 
 <p align="center">
-  <b>Team Project By: </b><br>
+  <b>Team Project By: </b><br><br>
   <a href="#">Aimee Ramirez</a> |
   <a href="#">Ash Trull</a> |
   <a href="#">Christian Migncca</a> |
@@ -28,7 +9,6 @@ Normal Text
   <br><br>
 </p>
 
-Normal text
 
 ## Introduction
 
@@ -45,29 +25,17 @@ Our prompt was to build Nozama, a site similar to Amazon.  We decided to act as 
 ## User Stories
 
 
-- As a user I want to be able to log in, log out so that I can save my products to purchase later
-
+- As a user I want to be able to log in, log out so that I can save my products to purchase late
 - As a user I want to see what you’re selling so that I know what kind of website I’m at (e-commerce)
-
 - As a user I want to add products to my cart so they can purchase them all at once
-
 - As a user I want ways to navigate out of every page so that I’m never stuck/rat-trapped
-
 - As a user I want to be able to actually purchase my products
-
 - As a user I want my cart to show my products, quantities, costs
-
 - As a user I want to be able to add multiple of one product to my cart or remove products from my cart
-
 - As a user I want to be able to edit my cart so that I can add more or delete from my cart before I check out
-
 - As a user I want to be able to contact customer service if I have any questions about the products or checkout process
-
 - As user I want there to be uniformity in product listings so I can easily find the information I need
-
-
 - As an admin I want users to only be able to add products to a cart when tehy’re logged in for simplicity of process
-
 - As an admin I want orders to show up in an orders collection when customers purchase their cart
 
 
@@ -128,7 +96,7 @@ Our prompt was to build Nozama, a site similar to Amazon.  We decided to act as 
 
 ## Data Model ERD
 
-![alt text](https://i.imgur.com/rpL2W4D.jpg "WireFrame V1")
+![alt text](https://i.imgur.com/rAMbj9f.jpg "WireFrame V1")
 
 ## Unsolved Issues
 
