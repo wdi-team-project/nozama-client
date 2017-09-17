@@ -76,7 +76,15 @@ const changePasswordFail = (error) => {
   $('#login-prompt').text('Could not change password. Please try again.')
   $('.change-password').hide()
   $('#show-change-pw').show()
+}
 
+const onAddProductSuccess = (data) => {
+  console.log('success')
+  console.log(app.user.cart)
+}
+
+const onAddProductFailure = (data) => {
+  console.log('failure')
 }
 
 module.exports = {
@@ -87,5 +95,7 @@ module.exports = {
   signOutSuccess,
   signOutFail,
   changePasswordSuccess,
-  changePasswordFail
+  changePasswordFail,
+  onAddProductSuccess,
+  onAddProductFailure
 }

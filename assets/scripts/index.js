@@ -44,27 +44,32 @@ $('.user-signout').on('submit', authEvents.onSignOut)
 // $('#show-change-pw')
 $('.change-password').on('submit', authEvents.onChangePassword)
 
-const pp = function () {
-  const productCollection = $('#productList').children()
-  const priceLocator = productCollection.children().first().siblings().next().html()
-  const prodTypeMod = priceLocator.split('').splice(2, 6).join('')
-  const prodPrice = parseInt(prodTypeMod) + 0.99
-  console.log(prodPrice)
-  return prodPrice
-}
 $('#productList').click(function () {
-  pp()
+  console.log('wtf')
+  $('#productList').click(authEvents.onAddProduct)
 })
 
-const pt = function () {
-  const productCollection = $('#productList').children()
-  const prodTitle = productCollection.children().first().children().html()
-  console.log(prodTitle)
-}
-
-$('#productList').click(function () {
-  pt()
-})
+// const pp = function () {
+//   const productCollection = $('#productList').children()
+//   const priceLocator = productCollection.children().first().siblings().next().html()
+//   const prodTypeMod = priceLocator.split('').splice(2, 6).join('')
+//   const prodPrice = parseInt(prodTypeMod) + 0.99
+//   console.log(prodPrice)
+//   return prodPrice
+// }
+// $('#productList').click(function () {
+//   pp()
+// })
+//
+// const pt = function () {
+//   const productCollection = $('#productList').children()
+//   const prodTitle = productCollection.children().first().children().html()
+//   console.log(prodTitle)
+// }
+//
+// $('#productList').click(function () {
+//   pt()
+// })
 
 // $('#productList').click(function () {
 //   const productCollection = $('#productList').children()
