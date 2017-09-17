@@ -1,14 +1,9 @@
 @import './colors';
 @import './typography';
 
-.container-fluid {
-  text-align: center;
-}
-
-.product-image {
-  height: 60px;
-  width: 60px;
-}
+// ==============================================
+// Element Modifiers Start ===================
+// ==============================================
 
 body {
   background-color: $primary;
@@ -16,57 +11,169 @@ body {
   text-align: center;
 }
 
+h1 {
+  clear: both;
+  color: $secondary;
+  font-family: $header-font;
+  font-size: 55px;
+  font-weight: bold;
+  margin-top: 10px;
+  text-align: center;
+}
+
+h2 {
+  color: $secondary;
+  font-family: 'Dosis';
+  font-size: 36px;
+  font-style: italic;
+  font-weight: bold;
+  margin: 0 10px;
+  text-align: center;
+}
+
+h3 {
+  color: $black;
+  font-family: 'Dosis';
+  font-size: 24px;
+  text-align: center;
+}
+
+h4 {
+  color: $blue;
+  font-size: 24px;
+}
+
 ul {
-  list-style-type: none;
   display: block;
   display: inline;
+  list-style-type: none;
 }
+
+// ==============================================
+//  =================== Element Modifiers End
+// ==============================================
+
+// ==============================================
+// Containers Start ==========================
+// ==============================================
 
 #header-container {
   background-color: $white;
-  border-radius: 20px;
-  padding-bottom: 10px;
   border: 5px solid $primary;
+  border-radius: 20px;
   margin: 208px auto 0;
+  padding-bottom: 10px;
   width: 80%;
 }
 
 #user-action-container {
   background-color: $secondary;
-  border-radius: 20px;
-  // padding-bottom: 10px;
-  // margin-bottom: 15px;
-  // padding-top: 10px;
-  margin: 0 auto;
   border: 5px solid $white;
+  border-radius: 20px;
+  margin: 0 auto;
   position: fixed;
   width: 95%;
   z-index: 1;
-
-}
-
-#shopBtn {
-  background-color: $primary;
-  border: none;
-  margin-bottom: 10px;
 }
 
 #landing-image {
-  border-radius: 10px;
   border: 20px solid $tertiary;
+  border-radius: 10px;
   margin-bottom: 35px;
   width: 100%;
 }
 
+.container-fluid {
+  text-align: center;
+}
+
+#productContainer {
+  text-align: center;
+  // background-color: $white;
+}
+
+// ==============================================
+// ========================== Containers End
+// ==============================================
+
+// ==============================================
+// Product Thumbnail Start ==================
+// ==============================================
+
+.productBorder {
+  background-color: $white;
+  border: 5px solid $secondary;
+  border-radius: 10px;
+  margin: 20px;
+}
+
+.productTitle {
+  color: $primary;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.product-image {
+  height: 60px;
+  width: 60px;
+}
+
+.productListed {
+  border: 3px solid $primary;
+  border-radius: 10px;
+  height: 150px;
+  width: 150px;
+}
+
+.productPrice {
+  background-color: $white;
+  border: 3px solid $secondary;
+  border-radius: 60%;
+  color: $primary;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 25px auto;
+  width: 60%;
+}
+
+#cartBtn {
+  background-color: $secondary;
+  border: 3px solid $tertiary;
+  border-radius: 10px;
+  color: $white;
+  margin-bottom: 10px;
+  width: 10em;
+}
+
+#cartBtn:hover {
+  background-color: $primary;
+  border: 3px solid $secondary;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+// ==============================================
+// ==================  Product Thumbnail End
+// ==============================================
+
+// ==============================================
+// User Interactions Start ==================
+// ==============================================
+
+#shopBtn {
+  background-color: $primary;
+  border: 0;
+  margin-bottom: 10px;
+}
+
 .btn-success {
   background-color: $primary;
-  color: $white;
-  border-radius: 20px;
   border: 0;
-  padding: 5px;
-  margin-bottom: 10px;
+  border-radius: 20px;
+  color: $white;
   font-weight: bold;
-
+  margin-bottom: 10px;
+  padding: 5px;
 }
 
 .navbar {
@@ -75,55 +182,26 @@ ul {
   margin-top: 10px;
 }
 
-h1 {
-  font-family: $header-font;
-  font-size: 55px;
-  text-align: center;
-  color: $secondary;
-  clear: both;
-  margin-top: 10px;
-  font-weight: bold;
-}
-
-h2 {
-  font-family: "Dosis";
-  font-size: 36px;
-  color: $secondary;
-  text-align: center;
-  font-style: italic;
-  font-weight: bold;
-  margin: 0 10px;
-}
-
-h3 {
-  font-family: "Dosis";
-  font-size: 24px;
-  color: #10621e;
+#productList {
   text-align: center;
 }
 
-h4 {
-  font-size: 24px;
-  color: $blue;
+// ==============================================
+// ==================  User Interactions End
+// ==============================================
 
-}
-
-/* Footer */
-
-// i {
-//   color: #B22222;
-//   margin: 0;
-//   padding: 2% 0;
-// }
+// ==============================================
+//  Footer Start ===========================
+// ==============================================
 
 #gitLogo {
-  width: 35px;
-  height: 35px;
+  border: 3px solid $white;
   border-radius: 10px;
+  height: 35px;
+  margin: 5px 10px;
   margin-right: 10px;
   margin-top: 10px;
-  margin: 5px 10px;
-  border: 3px solid $white;
+  width: 35px;
 }
 
 .footer {
@@ -137,60 +215,6 @@ h4 {
   padding: 0;
 }
 
-.productListed {
-  width: 150px;
-  height: 150px;
-  border-radius: 10px;
-  border: 3px solid $primary;
-}
-
-.productBorder {
-  border: 5px solid $secondary;
-  background-color: $white;
-  margin: 20px;
-  border-radius: 10px;
-}
-
-.productTitle {
-  color: $primary;
-  font-weight: bold;
-  // text-shadow: 2px 2px $black;
-  font-size: 20px;
-}
-
-.productPrice {
-  margin: 25px auto;
-  color: $primary;
-  font-weight: bold;
-  font-size: 18px;
-  width: 60%;
-  background-color: $white;
-  border-radius: 60%;
-  border: 3px solid $secondary;
-}
-
-#cartBtn {
-  margin-bottom: 10px;
-  border-radius: 10px;
-  background-color: $secondary;
-  border: 3px solid $tertiary;
-  color: $white;
-  width: 10em;
-}
-
-#cartBtn:hover {
-  margin-bottom: 10px;
-  border-radius: 10px;
-  background-color: $primary;
-  border: 3px solid $secondary;
-}
-
-
-#productList {
-  text-align: center;
-}
-
-#productContainer {
-  text-align: center;
-  // background-color: $white;
-}
+// ==============================================
+// ===========================   Footer End
+// ==============================================
