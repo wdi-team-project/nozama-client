@@ -2,10 +2,10 @@
 
 <p align="center">
   <b>Team Project By: </b><br><br>
-  <a href="#">Aimee Ramirez</a> |
-  <a href="#">Ash Trull</a> |
-  <a href="#">Christian Migncca</a> |
-  <a href="#">Christian Migncca</a>
+  <a href="https://github.com/Aimeelr08">Aimee Ramirez</a> |
+  <a href="https://github.com/ashtrull">Ash Trull</a> |
+  <a href="https://github.com/cmigz">Christian Migncca</a> |
+  <a href="https://github.com/wjbritton">Will Britton</a>
   <br><br>
 </p>
 
@@ -18,7 +18,7 @@ Our prompt was to build Nozama, a site similar to Amazon.  We decided to act as 
 
 ## Links
 
-- Deployed Client:
+- Deployed Client: Coming Soon
 
 - [API Repo](https://github.com/wdi-team-project/nozama-express-api)
 
