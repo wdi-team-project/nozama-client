@@ -81,6 +81,13 @@ const changePasswordFail = (error) => {
 const onAddProductSuccess = (data) => {
   console.log('success')
   console.log(app.user.cart)
+  console.log(app.user.cart.length)
+
+  for (let i = 0; i < app.user.cart.length; i++) {
+    $('#cartContainer').append(
+      '<li>' + app.user.cart[i].title + ' $ ' + app.user.cart[i].price + '</li>'
+    )
+  }
 }
 
 const onAddProductFailure = (data) => {
