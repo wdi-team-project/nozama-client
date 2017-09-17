@@ -1,172 +1,118 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-  <title>Peach Produce</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <!-- Do not add `link` tags-->
-<!-- Font Awesome -->
-  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
-  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-  <link rel="stylesheet" type="text/scss" href="./assets/styles/index.scss">
-  <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash|News+Cycle|PT+Sans+Narrow|Sacramento" rel="stylesheet">
-
-  <!-- Do not add `script` tags-->
-  <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
-  <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
-  <!-- TODO Add font scripts -->
-</head>
-
-<body class="container-fluid">
-<!-- Header/nav bar------------------------->
-    <div class="container-fluid">
-        <!-- TODO Add logo -->
-
-<!-- User authorization ------------------------->
+  <head>
+    <title>Peach Produce</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Do not add `link` tags-->
+    <!-- Font Awesome -->
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" type="text/scss" href="./assets/styles/index.scss">
+    <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash|News+Cycle|PT+Sans+Narrow|Sacramento" rel="stylesheet">
+    <!-- Do not add `script` tags-->
+    <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+    <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    <!-- TODO Add font scripts -->
+  </head>
+  <body class="container-fluid">
+    <nav>
+      <!-- User authorization -->
       <div class="navbar-auth" id="user-action-container">
         <h6 id="login-prompt">Log in to get shopping!</h6>
         <button class="btn-success"  type="button" name="show-signup-button" id="show-signup">Create an Account</button>
         <p id="already-prompt">Already have an account? </p>
         <button class="btn-success" type="button" name="show-signin-button" id="show-signin">Sign in</button>
-<!-- Sign up modal ------------------------->
-        <!-- <div class="modal fade" tabindex="-1" role="dialog" id="sign-up-modal">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button> -->
-                <!-- <h4 class="modal-title">Create an Account</h4> -->
-              <!-- </div> -->
-              <!-- <div class="modal-body"> -->
-                <form class="user-signup">
-                    <h4>Sign Up</h4>
-                  <input name="credentials[email]" type="text" value="" placeholder="Email">
-                  <input name="credentials[password]" type="password" value="" placeholder="Password">
-                  <input name="credentials[password_confirmation]" type="password" value="" placeholder="Re-enter Password">
-              <!-- </div> -->
-              <!-- <div class="modal-footer"> -->
-                <button class="btn-success" type="submit" name="submit" value="Sign Up!" id="create-button">Create Account</button>
-                </form>
-              <!-- </div> -->
-            <!-- </div> -->
-            <!-- /.modal-content -->
-          <!-- </div> -->
-          <!-- /.modal-dialog -->
-        <!-- </div> -->
-        <!-- /.modal -->
-<!-- Sign in modal ----------------------->
-        <!-- <div class="modal fade" tabindex="-1" role="dialog" id="sign-up-modal">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title">Sign in</h4>
-              </div> -->
-              <!-- <div class="modal-body"> -->
-                <form class="user-signin" id="user-signin">
-                  <h4>Sign In</h4>
-                  <input name="credentials[email]" type="text" value="" placeholder="Email">
-                  <input name="credentials[password]" type="password" value="" placeholder="Password">
-                  <button class="btn-success" type="submit" name="submit" value="Sign In!" id="sign-in-button">Sign In</button>
-                </form>
-              <!-- </div>
-              <div class="modal-footer">
-                <button type="submit" name="submit" class="btn btn-default" value="Sign In!" id="sign-in-button">Sign In</button>
-              </div>
-            </div> -->
-            <!-- /.modal-content -->
-          <!-- </div> -->
-          <!-- /.modal-dialog -->
-        <!-- </div> -->
-        <!-- /.modal -->
-<!-- Logout form ------------------------->
+        <!-- Sign up Field -->
+        <form class="user-signup">
+          <h4>Sign Up</h4>
+          <input name="credentials[email]" type="text" value="" placeholder="Email">
+          <input name="credentials[password]" type="password" value="" placeholder="Password">
+          <input name="credentials[password_confirmation]" type="password" value="" placeholder="Re-enter Password">
+          <button class="btn-success" type="submit" name="submit" value="Sign Up!" id="create-button">Create Account</button>
+        </form>
+        <!-- Sign in Field -->
+        <form class="user-signin" id="user-signin">
+          <h4>Sign In</h4>
+          <input name="credentials[email]" type="text" value="" placeholder="Email">
+          <input name="credentials[password]" type="password" value="" placeholder="Password">
+          <button class="btn-success" type="submit" name="submit" value="Sign In!" id="sign-in-button">Sign In</button>
+        </form>
+        <!-- Logout form -->
         <form class="user-signout" id="user-signout">
           <h4>Sign Out</h4>
           <button class="btn-success" type="submit" value="Sign Out!" id="sign-out-button">Sign Out</button>
         </form>
-<!-- Change password form ------------------------->
-<button class="btn-success" type="button" id="show-change-pw">Change Password</button>
+        <!-- Change password form -->
+        <button class="btn-success" type="button" id="show-change-pw">Change Password</button>
         <form class="change-password" id="change-pw">
           <h4>Change Password</h4>
           <input name="credentials[password]" type="password" value="" placeholder="Password">
           <input name="credentials[newpassword]" type="password" value="" placeholder="New Password">
           <button class="btn-success" type="submit" value="Change Password" id="change-pw-button">Change Password</button>
         </form>
-<!-- Show shopping cart ------------------------->
-<button class="btn-success" type="button" id="show-my-cart">My Cart</button>
-<br>
-<div class="dropdown right">
-  <button id="shopBtn" type="button" class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown"><i id="shopBtn" class="fa fa-shopping-cart fa-2x">  My Cart</i></button>
-  <ul class="dropdown-menu dropdown-menu-right">
-    <li><a href="#">HTML</a></li>
-    <li><a href="#">CSS</a></li>
-    <li><a href="#">JavaScript</a></li>
-  </ul>
-</div>
-  </nav>
-</div>
-
-<div id="header-container">
-  <h1>Peach</h1>
-  <h2>The sweetest experience in online groceries</h2>
-</div>
-  <!-- Body of landing page  -->
-  <img id="landing-image" src="https://i.imgur.com/dC3F6tY.jpg?1" title="source: imgur.com" />
-</div>
-  <!-- TODO Add feature product carousel -->
-  <!-- TODO Add grid structure for product icons -->
-
-
-  <!-- <div class="col-md-2"></div> -->
-    <div class=" container-fluid col-md-12">
-      <div id="productList" class="row">
+        <!-- Show shopping cart -->
+        <button class="btn-success" type="button" id="show-my-cart">My Cart</button>
+        <br>
+        <div class="dropdown right">
+          <button id="shopBtn" type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown"><i id="shopBtn" class="fa fa-shopping-cart fa-2x">  My Cart</i></button>
+          <ul class="dropdown-menu dropdown-menu-right">
+            <li><a href="#">HTML</a></li>
+            <li><a href="#">CSS</a></li>
+            <li><a href="#">JavaScript</a></li>
+          </ul>
+        </div>
       </div>
-    </div>
-
-  <!-- <div class="col-md-2"></div> -->
-</div>
-<div class="footer navbar-fixed-bottom">
-  <div class="row">
-    <div class= col-md-3>
-      <a href="https://github.com/ashtrull" target="_blank">
-        <p class="name">
-          <img alt="GitHub Logo" id="gitLogo" src="https://i.imgur.com/I7icsdR.png">
-          Ash Trull
-        </p>
-      </a>
-    </div>
-    <div class= col-md-3>
-        <a href="https://github.com/aimeelr08" target="_blank">
-          <p class="name">
-            <img alt="GitHub Logo" id="gitLogo" src="https://i.imgur.com/I7icsdR.png">
-            Aimee Ramirez
-          </p>
-        </a>
+    </nav>
+    <main>
+      <div id="header-container">
+        <h1>Peach</h1>
+        <h2>The sweetest experience in online groceries</h2>
       </div>
-
-    <div class= col-md-3>
-      <a href="https://github.com/cmigz" target="_blank">
-        <p class="name">
-          <img alt="GitHub Logo" id="gitLogo" src="https://i.imgur.com/I7icsdR.png">
-          Christian Mignacca
-        </p>
-      </a>
-    </div>
-
-
-  <div class= col-md-3>
-    <a href="https://github.com/wjbritton" target="_blank">
-      <p class="name">
-        <img alt="GitHub Logo" id="gitLogo" src="https://i.imgur.com/I7icsdR.png">
-        Will Britton
-      </p>
-    </a>
-  </div>
-  </div>
-</div>
-</div>
-</div
-
-</body>
+      <!-- Body of landing page  -->
+      <!-- TODO Add feature product carousel -->
+      <!-- TODO Add grid structure for product icons -->
+      <img id="landing-image" src="https://i.imgur.com/dC3F6tY.jpg?1" alt="GitHub" title="source: imgur.com" />
+      <div class=" container-fluid col-md-12">
+        <div id="productList" class="row"></div>
+      </div>
+    </main>
+    <footer>
+      <div class="footer navbar-fixed-bottom">
+        <div class="row">
+          <div class= col-xs-3>
+            <a href="https://github.com/ashtrull" target="_blank">
+              <p class="name">
+                <img alt="GitHub Logo" id="gitLogo" src="https://i.imgur.com/I7icsdR.png">
+                Ash Trull
+              </p>
+            </a>
+          </div>
+          <div class= col-xs-3>
+            <a href="https://github.com/aimeelr08" target="_blank">
+              <p class="name">
+                <img alt="GitHub Logo" id="gitLogo" src="https://i.imgur.com/I7icsdR.png">
+                Aimee Ramirez
+              </p>
+            </a>
+          </div>
+          <div class= col-xs-3>
+            <a href="https://github.com/cmigz" target="_blank">
+              <p class="name">
+                <img alt="GitHub Logo" id="gitLogo" src="https://i.imgur.com/I7icsdR.png">
+                Christian Mignacca
+              </p>
+            </a>
+          </div>
+          <div class= col-xs-3>
+            <a href="https://github.com/wjbritton" target="_blank">
+              <p class="name">
+                <img alt="GitHub Logo" id="gitLogo" src="https://i.imgur.com/I7icsdR.png">
+                Will Britton
+              </p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>
