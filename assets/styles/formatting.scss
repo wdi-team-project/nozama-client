@@ -43,10 +43,8 @@ h4 {
   font-size: 24px;
 }
 
-ul {
-  display: block;
-  display: inline;
-  list-style-type: none;
+h5 {
+  font-size: 18px;
 }
 
 // ==============================================
@@ -90,6 +88,31 @@ ul {
 #productContainer {
   text-align: center;
   // background-color: $white;
+}
+
+ul {
+  display: inline-block;
+  list-style-type: none;
+  padding: 1% 2%;
+}
+
+.headerLi {
+  padding: 5em 2em 0;
+}
+
+#cartLi {
+  padding: 3em 7em 0 3em;
+}
+
+#peachLogo {
+  border: 3px solid $primary;
+  border-radius: 50%;
+  height: 8em;
+  width: 8em;
+}
+
+#liLogo {
+  padding: 0 0 0 3em;
 }
 
 // ==============================================
@@ -180,6 +203,10 @@ ul {
   background-color: $secondary;
   border: 0;
   margin-top: 10px;
+}
+
+nav {
+  padding: 2% 0 0;
 }
 
 #productList {

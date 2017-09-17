@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Peach Produce</title>
+    <title>Peach</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Do not add `link` tags-->
     <!-- Font Awesome -->
@@ -18,10 +18,25 @@
     <nav>
       <!-- User authorization -->
       <div class="navbar-auth" id="user-action-container">
-        <h6 id="login-prompt">Log in to get shopping!</h6>
-        <button class="btn-success"  type="button" name="show-signup-button" id="show-signup">Create an Account</button>
-        <p id="already-prompt">Already have an account? </p>
-        <button class="btn-success" type="button" name="show-signin-button" id="show-signin">Sign in</button>
+        <ul class="nav navbar-nav">
+          <li id="liLogo" class="headerLi"><img id="peachLogo" src="https://i.imgur.com/m0V7vOr.png" alt="peachLogo" title="source: imgur.com"></li>
+          <li class="headerLi"><h5 id="login-prompt">Log in to get shopping!</h5></li>
+          <li class="headerLi"><button class="btn-success"  type="button" name="show-signup-button" id="show-signup">Create an Account</button></li>
+          <li class="headerLi"><h5 id="already-prompt">Already have an account? </h5></li>
+          <li class="headerLi"><button class="btn-success" type="button" name="show-signin-button" id="show-signin">Sign in</button></li>
+          <li class="headerLi">
+            <!-- Show shopping cart -->
+            <button class="btn-success" type="button" id="show-my-cart">My Cart</button>
+            <div class="dropdown right">
+              <button id="shopBtn" type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown"><i id="shopBtn" class="fa fa-shopping-cart fa-2x">  My Cart</i></button>
+              <ul class="dropdown-menu dropdown-menu-right">
+                <li><a href="#">HTML</a></li>
+                <li><a href="#">CSS</a></li>
+                <li><a href="#">JavaScript</a></li>
+              </ul>
+            </div>
+         </li>
+        </ul>
         <!-- Sign up Field -->
         <form class="user-signup">
           <h4>Sign Up</h4>
@@ -50,17 +65,6 @@
           <input name="credentials[newpassword]" type="password" value="" placeholder="New Password">
           <button class="btn-success" type="submit" value="Change Password" id="change-pw-button">Change Password</button>
         </form>
-        <!-- Show shopping cart -->
-        <button class="btn-success" type="button" id="show-my-cart">My Cart</button>
-        <br>
-        <div class="dropdown right">
-          <button id="shopBtn" type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown"><i id="shopBtn" class="fa fa-shopping-cart fa-2x">  My Cart</i></button>
-          <ul class="dropdown-menu dropdown-menu-right">
-            <li><a href="#">HTML</a></li>
-            <li><a href="#">CSS</a></li>
-            <li><a href="#">JavaScript</a></li>
-          </ul>
-        </div>
       </div>
     </nav>
     <main>
