@@ -76,7 +76,31 @@ const changePasswordFail = (error) => {
   $('#login-prompt').text('Could not change password. Please try again.')
   $('.change-password').hide()
   $('#show-change-pw').show()
+}
 
+const onAddProductSuccess = (data) => {
+  console.log('success')
+  console.log(app.user.cart)
+  console.log(app.user.cart.length)
+
+  for (let i = 0; i < app.user.cart.length; i++) {
+    $('#cartContainer').append(
+      '<li>' + app.user.cart[i].title + ' $ ' + app.user.cart[i].price + '</li>'
+    )
+  }
+}
+
+const onAddProductFailure = (data) => {
+  console.log('failure')
+}
+
+const onEmptyCartSuccess = (data) => {
+  $('#cartContainer').remove('li')
+  console.log('should be empty')
+}
+
+const onEmptyCartFailure = (data) => {
+  console.log('shit')
 }
 
 module.exports = {
@@ -87,5 +111,9 @@ module.exports = {
   signOutSuccess,
   signOutFail,
   changePasswordSuccess,
-  changePasswordFail
+  changePasswordFail,
+  onAddProductSuccess,
+  onAddProductFailure,
+  onEmptyCartFailure,
+  onEmptyCartSuccess
 }
