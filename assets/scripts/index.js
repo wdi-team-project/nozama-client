@@ -6,7 +6,7 @@ const authEvents = require('./auth/events.js')
 const produce = require('./produce/api.js')
 
 $(() => {
-  setAPIOrigin(location, config)
+ setAPIOrigin(location, config)
   $('.carousel').carousel()
   $('.user-signup').hide()
   $('.user-signin').hide()
