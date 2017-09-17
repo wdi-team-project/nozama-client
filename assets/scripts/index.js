@@ -49,6 +49,11 @@ $('#productList').click(function () {
   $('#productList').click(authEvents.onAddProduct)
 })
 
+const empty = authEvents.onEmptyCart
+$('#emptyCart').click(function () {
+  empty()
+})
+
 // const pp = function () {
 //   const productCollection = $('#productList').children()
 //   const priceLocator = productCollection.children().first().siblings().next().html()

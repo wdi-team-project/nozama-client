@@ -74,11 +74,23 @@ const onAddProduct = function (event) {
     .catch(ui.onAddProductFailure)
 }
 
+const onEmptyCart = function (event) {
+  console.log('Step 1: Events Start')
+  // event.preventDefault()
+  // const data = event
+  console.log('data')
+  // console.log(data)
+  api.emptyCart()
+    .then(ui.onAddProductSuccess)
+    .catch(ui.onAddProductFailure)
+}
+
 module.exports = {
   onSignUp,
   onSignIn,
   onSignOut,
   onChangePassword,
-  onAddProduct
+  onAddProduct,
+  onEmptyCart
 
 }

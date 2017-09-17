@@ -84,10 +84,23 @@ const addProduct = (title, price, data) => {
   })
 }
 
+const emptyCart = (data) => {
+  console.log(data)
+  return $.ajax({
+    url: app.host + '/users/' + app.user.id + '/cart',
+    method: 'PATCH',
+    headers: {
+      Authorization: 'Token token=' + app.user.token
+    },
+    data: app.user.cart
+  })
+}
+
 module.exports = {
   signUp,
   signIn,
   signOut,
   changePassword,
-  addProduct
+  addProduct,
+  emptyCart
 }

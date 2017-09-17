@@ -94,6 +94,15 @@ const onAddProductFailure = (data) => {
   console.log('failure')
 }
 
+const onEmptyCartSuccess = (data) => {
+  $('#cartContainer').remove('li')
+  console.log('should be empty')
+}
+
+const onEmptyCartFailure = (data) => {
+  console.log('shit')
+}
+
 module.exports = {
   signUpSuccess,
   signUpFail,
@@ -104,5 +113,7 @@ module.exports = {
   changePasswordSuccess,
   changePasswordFail,
   onAddProductSuccess,
-  onAddProductFailure
+  onAddProductFailure,
+  onEmptyCartFailure,
+  onEmptyCartSuccess
 }
