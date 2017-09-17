@@ -44,9 +44,11 @@ const onChangePassword = function (event) {
     .fail(ui.changePasswordFail)
 }
 
-
-
-
+const onAddProduct = function (event) {
+  event.preventDefault()
+  console.log('onAddProduct Event')
+  console.log(event)
+}
 
 module.exports = {
   onSignUp,

@@ -13,18 +13,22 @@ const getProduct = function (data) {
     dataType: 'json',
     success: function (response, textStatus, jqXhr) {
       const product = response.products
-      // console.log(product.length)
-      let count = 0
       for (let i = 0; i < product.length; i++) {
         const title = product[i].title
         const price = product[i].price
         const img = product[i].imageLink
-        count++
-        if (count % 4 === 0) {
-          $('#productList').append('<div class="col-md-1"></div><div class="productBorder col-md-2 center"><h3>' + title + '</h3><br><img class="productListed" src="' + img + '">  ' + '<br><p class="productDisplay">$ ' + price + '<br><br> <button type="button" class="btn  btn-lg center">Add Cart</button> ' + '</p></div><br><br>' )
-        } else {
-          $('#productList').append('<div class="col-md-1"></div><div class="productBorder col-md-2 center"><h3>' + title + '</h3><br><img class="productListed" src="' + img + '">  ' + '<br><p class="productDisplay">$ ' + price + '<br><br> <button type="button" class="btn  btn-lg center">Add Cart</button> ' + '</p></div>')
-        }
+        $('#productList').append(
+          '<div id="" class="productBorder col-md-2 center">' +
+            '<div>' +
+            '<h3 class="productTitle">' + title + '</h3>' + '<br>' +
+            '</div>' +
+            '<div>' +
+            '<img class="productListed" src="' + img + '">' + '<br>' +
+            '</div>' +
+            '<p class="productPrice">$ ' + price + '</p>' +
+            '<button id="' + 'cartBtn' + '"class="btn center">Add to Cart</button>' +
+        '</div>'
+        )
       }
     }
   })

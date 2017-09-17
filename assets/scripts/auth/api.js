@@ -67,6 +67,23 @@ const changePassword = (data) => {
   })
 }
 
+// Add Product to user Cart
+const addProduct = (data) => {
+  return $.ajax({
+    url: app.host + '/users' + app.user.id,
+    method: 'PATCH',
+    headers: {
+      Authorization: 'Token token= ' + app.user.token
+    },
+    data: {
+      'products': {
+        'title': 'banana',
+        'price': 2
+      }
+    }
+  })
+}
+
 module.exports = {
   signUp,
   signIn,
