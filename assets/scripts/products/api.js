@@ -1,6 +1,5 @@
 'use strict'
 const app = require('../app.js')
-const config = require('../config.js')
 
 // GET products
 const getProduct = function (data) {
@@ -52,6 +51,40 @@ const addProduct = (title, price, data) => {
   })
 }
 
+const showProduct = (user, token) => {
+  console.log(user)
+  return $.ajax({
+    url: app.host + '/users/' + user,
+    method: 'GET',
+    headers: {
+      Authorization: 'Token token=' + app.user.token
+    },
+    data: {
+      'user': {
+        'id': user,
+        'token': token
+      }
+    }
+  })
+}
+
+const showCart = (user, token) => {
+  console.log(user)
+  return $.ajax({
+    url: app.host + '/users/' + user,
+    method: 'GET',
+    headers: {
+      Authorization: 'Token token=' + app.user.token
+    },
+    data: {
+      'user': {
+        'id': user,
+        'token': token
+      }
+    }
+  })
+}
+
 const emptyCart = (data) => {
   console.log(data)
   return $.ajax({
@@ -67,5 +100,7 @@ const emptyCart = (data) => {
 module.exports = {
   getProduct,
   addProduct,
+  showProduct,
+  showCart,
   emptyCart
 }

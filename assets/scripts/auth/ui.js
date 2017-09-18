@@ -28,7 +28,7 @@ const signInSuccess = (data) => {
   $('.user-signout').show()
   $('#show-change-pw').show()
   $('#show-my-cart').show()
-  $('#empty-cart').hide()
+  $('#empty-cart').show()
 }
 
 const signInFail = (error) => {

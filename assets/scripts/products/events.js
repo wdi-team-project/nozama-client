@@ -10,6 +10,16 @@ const app = require('../app.js')
 //     .catch(ui.onGetProductsFailure)
 // }
 
+const onShowCart = function (event) {
+  console.log(event.target)
+  console.log('onShowCart')
+  const user = app.user.id
+  const token = app.user.token
+  api.showCart(user, token)
+    .then(ui.onShowCartSuccess)
+    .catch(ui.onShowCartFailure)
+}
+
 const onAddProduct = function (event) {
   console.log(this)
   console.log(this.id)
@@ -34,9 +44,11 @@ const onAddProduct = function (event) {
   console.log('got here 3')
   console.log(title)
   const user = app.user.id
+  const token = app.user.token
   console.log('Events User')
   console.log(user)
   api.addProduct(title, price)
+    .then(api.showProduct(user, token))
     .then(ui.onAddProductSuccess)
     .catch(ui.onAddProductFailure)
 }
@@ -52,6 +64,7 @@ const onEmptyCart = function (event) {
     .catch(ui.onAddProductFailure)
 }
 module.exports = {
+  onShowCart,
   onAddProduct,
   onEmptyCart
 }

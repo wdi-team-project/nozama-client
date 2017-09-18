@@ -46,11 +46,8 @@ $(() => {
   $('.change-password').on('submit', authEvents.onChangePassword)
 
   $(document).on('click', '.add-to-cart-btn', productEvents.onAddProduct)
-
-  const empty = authEvents.onEmptyCart
-  $('#empty-cart').click(function () {
-    empty()
-  })
+  $('#show-my-cart').on('click', productEvents.onShowCart)
+  $('#empty-cart').on('click', productEvents.onEmptyCart)
 })
 
 // const pp = function () {
