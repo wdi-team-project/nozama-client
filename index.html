@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Do not add `link` tags-->
-<!-- Font Awesome -->
+  <!-- Font Awesome -->
   <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
@@ -22,7 +22,7 @@
 </head>
 
 <body class="container-fluid">
-<!-- Header/nav bar------------------------->
+  <!-- Header/nav bar------------------------->
   <nav class="navbar navbar-default">
     <div class="container-fluid">
       <div class="navbar-header">
@@ -32,38 +32,38 @@
           <h2>The sweetest experience in online groceries</h2>
         </div>
       </div>
-<!-- User authorization ------------------------->
+      <!-- User authorization ------------------------->
       <div class="navbar-auth" id="user-action-container">
         <h6 id="login-prompt">Log in to get shopping!</h6>
-        <button class="btn-success"  type="button" name="show-signup-button" id="show-signup">Create an Account</button>
+        <button class="btn-success" type="button" name="show-signup-button" id="show-signup">Create an Account</button>
         <p id="already-prompt">Already have an account? </p>
         <button class="btn-success" type="button" name="show-signin-button" id="show-signin">Sign in</button>
-<!-- Sign up modal ------------------------->
+        <!-- Sign up modal ------------------------->
         <!-- <div class="modal fade" tabindex="-1" role="dialog" id="sign-up-modal">
           <div class="modal-dialog" role="document">
             <div class="modal-content">
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button> -->
-                <!-- <h4 class="modal-title">Create an Account</h4> -->
-              <!-- </div> -->
-              <!-- <div class="modal-body"> -->
-                <form class="user-signup">
-                    <h4>Sign Up</h4>
-                  <input name="credentials[email]" type="text" value="" placeholder="Email">
-                  <input name="credentials[password]" type="password" value="" placeholder="Password">
-                  <input name="credentials[password_confirmation]" type="password" value="" placeholder="Re-enter Password">
-              <!-- </div> -->
-              <!-- <div class="modal-footer"> -->
-                <button class="btn-success" type="submit" name="submit" value="Sign Up!" id="create-button">Create Account</button>
-                </form>
-              <!-- </div> -->
-            <!-- </div> -->
-            <!-- /.modal-content -->
+        <!-- <h4 class="modal-title">Create an Account</h4> -->
+        <!-- </div> -->
+        <!-- <div class="modal-body"> -->
+        <form class="user-signup">
+          <h4>Sign Up</h4>
+          <input name="credentials[email]" type="text" value="" placeholder="Email">
+          <input name="credentials[password]" type="password" value="" placeholder="Password">
+          <input name="credentials[password_confirmation]" type="password" value="" placeholder="Re-enter Password">
           <!-- </div> -->
-          <!-- /.modal-dialog -->
+          <!-- <div class="modal-footer"> -->
+          <button class="btn-success" type="submit" name="submit" value="Sign Up!" id="create-button">Create Account</button>
+        </form>
+        <!-- </div> -->
+        <!-- </div> -->
+        <!-- /.modal-content -->
+        <!-- </div> -->
+        <!-- /.modal-dialog -->
         <!-- </div> -->
         <!-- /.modal -->
-<!-- Sign in modal ----------------------->
+        <!-- Sign in modal ----------------------->
         <!-- <div class="modal fade" tabindex="-1" role="dialog" id="sign-up-modal">
           <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -71,52 +71,52 @@
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                 <h4 class="modal-title">Sign in</h4>
               </div> -->
-              <!-- <div class="modal-body"> -->
-                <form class="user-signin" id="user-signin">
-                  <h4>Sign In</h4>
-                  <input name="credentials[email]" type="text" value="" placeholder="Email">
-                  <input name="credentials[password]" type="password" value="" placeholder="Password">
-                  <button class="btn-success" type="submit" name="submit" value="Sign In!" id="sign-in-button">Sign In</button>
-                </form>
-              <!-- </div>
+        <!-- <div class="modal-body"> -->
+        <form class="user-signin" id="user-signin">
+          <h4>Sign In</h4>
+          <input name="credentials[email]" type="text" value="" placeholder="Email">
+          <input name="credentials[password]" type="password" value="" placeholder="Password">
+          <button class="btn-success" type="submit" name="submit" value="Sign In!" id="sign-in-button">Sign In</button>
+        </form>
+        <!-- </div>
               <div class="modal-footer">
                 <button type="submit" name="submit" class="btn btn-default" value="Sign In!" id="sign-in-button">Sign In</button>
               </div>
             </div> -->
-            <!-- /.modal-content -->
-          <!-- </div> -->
-          <!-- /.modal-dialog -->
+        <!-- /.modal-content -->
+        <!-- </div> -->
+        <!-- /.modal-dialog -->
         <!-- </div> -->
         <!-- /.modal -->
-<!-- Logout form ------------------------->
+        <!-- Logout form ------------------------->
         <form class="user-signout" id="user-signout">
           <h4>Sign Out</h4>
           <button class="btn-success" type="submit" value="Sign Out!" id="sign-out-button">Sign Out</button>
         </form>
-<!-- Change password form ------------------------->
-<button class="btn-success" type="button" id="show-change-pw">Change Password</button>
+        <!-- Change password form ------------------------->
+        <button class="btn-success" type="button" id="show-change-pw">Change Password</button>
         <form class="change-password" id="change-pw">
           <h4>Change Password</h4>
           <input name="credentials[password]" type="password" value="" placeholder="Password">
           <input name="credentials[newpassword]" type="password" value="" placeholder="New Password">
           <button class="btn-success" type="submit" value="Change Password" id="change-pw-button">Change Password</button>
         </form>
-<!-- Show shopping cart ------------------------->
-<button class="btn-success" type="button" id="show-my-cart">My Cart</button>
-<br>
-<div class="dropdown right">
-  <button id="shopBtn" type="button" class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown"><i class="fa fa-shopping-cart fa-2x">  My Cart</i></button>
-  <ul class="dropdown-menu dropdown-menu-right">
-    <li><a href="#">HTML</a></li>
-    <li><a href="#">CSS</a></li>
-    <li><a href="#">JavaScript</a></li>
-  </ul>
-</div>
+        <!-- Show shopping cart ------------------------->
+        <button class="btn-success" type="button" id="show-my-cart">My Cart</button>
+        <br>
+        <div class="dropdown right">
+          <button id="shopBtn" type="button" class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown"><i class="fa fa-shopping-cart fa-2x">  My Cart</i></button>
+          <ul class="dropdown-menu dropdown-menu-right">
+            <li><a href="#">HTML</a></li>
+            <li><a href="#">CSS</a></li>
+            <li><a href="#">JavaScript</a></li>
+          </ul>
+        </div>
   </nav>
-</div>
+  </div>
   <!-- Body of landing page  -->
   <img id="landing-image" src="https://i.imgur.com/dC3F6tY.jpg?1" title="source: imgur.com" />
-</div>
+  </div>
   <!--AR/WB Add feature product carousel -->
   <h2>Carousel Example</h2>
   <div id="images">
@@ -130,19 +130,19 @@
       </ol>
 
       <!-- Wrapper for slides -->
-      <div class="carousel-inner" >
-  <div class="divider"></div>
-        <div class="item active" >
+      <div class="carousel-inner">
+        <div class="divider"></div>
+        <div class="item active">
 
-          <img src="https://i.imgur.com/sHanUuq.jpg" alt="fruit1" width="100%;" >
+          <img src="https://i.imgur.com/sHanUuq.jpg" alt="fruit1" width="100%;">
         </div>
 
         <div class="item">
-          <img src="https://i.imgur.com/JA2UXci.jpg" alt="fruit2" width="100%;" >
+          <img src="https://i.imgur.com/JA2UXci.jpg" alt="fruit2" width="100%;">
         </div>
 
         <div class="item">
-          <img src="https://i.imgur.com/wyRhNI7.jpg" alt="fruit3" width="100%;" >
+          <img src="https://i.imgur.com/wyRhNI7.jpg" alt="fruit3" width="100%;">
         </div>
       </div>
 
@@ -157,52 +157,54 @@
       </a>
     </div>
   </div>
- </div>
- <div class="divider"></div>
+  </div>
+  <div class="divider"></div>
 
-    <!-- AR  Added feature product carousel -->
+  <!-- AR  Added feature product carousel -->
 
   <!-- TODO Add grid structure for product icons -->
 
-<div class ="productBorder" id="productContainer">
+  <div class="productBorder" id="productContainer">
 
+
+    <!-- <div class="col-md-2"></div> -->
+    <div id="productList" class="col-md-12"></div>
+  </div>
 
   <!-- <div class="col-md-2"></div> -->
-    <div id="productList" class="col-md-12"></div></div>
+  </div>
+  <div class="footer navbar-fixed-bottom">
+    <div class="col-xs-2"></div>
+    <div class="col-xs-2 center">
 
-  <!-- <div class="col-md-2"></div> -->
-</div>
-<div class="footer navbar-fixed-bottom">
-  <div class="col-xs-2"></div>
-  <div class="col-xs-2 center">
-
-    <a href="https://github.com/ashtrull" target="_blank">
+      <a href="https://github.com/ashtrull" target="_blank">
       <i class="icon-footer fa fa-git-square fa-4x"></i>
       <p class="name">Ash</p>
     </a>
-  </div>
-<div class="col-xs-2 center">
+    </div>
+    <div class="col-xs-2 center">
 
-  <a href="https://github.com/Aimeelr08" target="_blank">
+      <a href="https://github.com/Aimeelr08" target="_blank">
     <i class="icon-footer fa fa-git-square fa-4x"></i>
     <p class="name">Aimee</p>
   </a>
-</div>
-<div class="col-xs-2 center">
+    </div>
+    <div class="col-xs-2 center">
 
-  <a href="https://github.com/cmigz" target="_blank">
+      <a href="https://github.com/cmigz" target="_blank">
     <i class="icon-footer fa fa-git-square fa-4x"></i>
     <p class="name">Christian</p>
   </a>
-</div>
-<div class="col-xs-2 center">
-  <a href="https://github.com/wjbritton" target="_blank">
+    </div>
+    <div class="col-xs-2 center">
+      <a href="https://github.com/wjbritton" target="_blank">
     <i class="icon-footer fa fa-git-square fa-4x"></i>
     <p class="name">Will</p>
   </a>
-</div>
+    </div>
     <div class="col-xs-2"></div>
   </div>
 
 </body>
+
 </html>
