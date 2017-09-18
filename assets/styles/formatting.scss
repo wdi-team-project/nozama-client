@@ -98,6 +98,15 @@ ul {
   overflow: scroll;
 }
 
+#pageLogo {
+  height: 125px;
+  width: 125px;
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 50%;
+  border:5px solid $primary;
+}
+
 // ==============================================
 // ========================== Containers End
 // ==============================================
