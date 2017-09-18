@@ -17,7 +17,7 @@ $(() => {
   $('#show-my-cart').hide()
   $('#empty-cart').hide()
 
-  $('.productBtn').on('load', products.getProduct())
+  $('.productBtn').on('load', products.getProducts())
 
   $('#show-signup').click(function () {
     $('.user-signup').show()

@@ -2,7 +2,7 @@
 const app = require('../app.js')
 
 // GET products
-const getProduct = function (data) {
+const getProducts = function (data) {
   console.log(data)
   return $.ajax({
     method: 'GET',
@@ -33,9 +33,27 @@ const getProduct = function (data) {
   })
 }
 
+const getProduct = (id) => {
+  console.log('getProduct')
+  return $.ajax({
+    url: app.host + '/products/' + id,
+    headers: {'header': 'Content-Type: application/json'},
+    method: 'GET',
+    data: {
+      'products': {
+        '_id': id
+      }
+    }
+  })
+}
+
 // Add Product to user Cart
-const addProduct = (title, price, data) => {
+const addProduct = (data) => {
+  console.log(data)
   console.log('addProduct')
+  console.log('title: ' + data.product.title + ' price: ' + data.product.price)
+  const title = data.product.title
+  const price = data.product.price
   return $.ajax({
     url: app.host + '/users/' + app.user.id,
     method: 'PATCH',
@@ -46,23 +64,6 @@ const addProduct = (title, price, data) => {
       'products': {
         'title': title,
         'price': price
-      }
-    }
-  })
-}
-
-const showProduct = (user, token) => {
-  console.log(user)
-  return $.ajax({
-    url: app.host + '/users/' + user,
-    method: 'GET',
-    headers: {
-      Authorization: 'Token token=' + app.user.token
-    },
-    data: {
-      'user': {
-        'id': user,
-        'token': token
       }
     }
   })
@@ -98,9 +99,9 @@ const emptyCart = (data) => {
 }
 
 module.exports = {
+  getProducts,
   getProduct,
   addProduct,
-  showProduct,
   showCart,
   emptyCart
 }

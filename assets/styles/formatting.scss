@@ -23,7 +23,7 @@ h1 {
 
 h2 {
   color: $secondary;
-  font-family: 'Dosis';
+  font-family: $tagline-font;
   font-size: 36px;
   font-style: italic;
   font-weight: bold;
@@ -40,6 +40,7 @@ h3 {
 
 h4 {
   color: $black;
+  font-family: $body-font;
   font-size: 24px;
 }
 
@@ -133,12 +134,12 @@ ul {
 .productPrice {
   background-color: $white;
   border: 3px solid $secondary;
-  border-radius: 60%;
+  border-radius: 10%;
   color: $primary;
   font-size: 18px;
   font-weight: bold;
   margin: 25px auto;
-  width: 60%;
+  width: 50%;
 }
 
 #add-to-cart-btn {
