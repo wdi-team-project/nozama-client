@@ -28,7 +28,7 @@ const onShowCartSuccess = (data) => {
   $('#cartContainer').empty()
   for (let i = 0; i < app.user.cart.length; i++) {
     $('#cartContainer').append(
-      '<li>' + app.user.cart[i].title + ' $ ' + app.user.cart[i].price + '</li>'
+      '<li id="cartList">' + ' - ' + app.user.cart[i].title + ': $ ' + app.user.cart[i].price + '</li>'
     )
   }
 }
