@@ -12,7 +12,6 @@
     <!-- Do not add `script` tags-->
     <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
     <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
-    <!-- TODO Add font scripts -->
   </head>
   <body class="container-fluid">
     <nav>
@@ -51,18 +50,20 @@
           <button class="btn-success" type="submit" value="Change Password" id="change-pw-button">Change Password</button>
         </form>
         <!-- Show shopping cart -->
-        <button id="emptyCart" class="btn-success" type="button" >Empty Cart</button>
+        <button id="empty-cart" class="btn-success" type="button">Empty Cart</button>
         <br>
         <div class="dropdown right">
-          <button id="shopBtn" type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown"><i id="shopBtn" class="fa fa-shopping-cart fa-2x">  My Cart</i></button>
+          <button id="show-my-cart" type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown"><i id="shopBtn" class="fa fa-shopping-cart fa-2x">My Cart</i></button>
           <ul id="cartContainer" class="dropdown-menu dropdown-menu-right">
-
           </ul>
         </div>
       </div>
     </nav>
     <main>
       <div id="header-container">
+        <a href="https://i.imgur.com/m0V7vOr.png" target="_blank">
+          <img id="pageLogo" src="https://i.imgur.com/m0V7vOr.png" alt="logo">
+        </a>
         <h1>Peach</h1>
         <h2>The sweetest experience in online groceries</h2>
       </div>
@@ -71,7 +72,8 @@
       <!-- TODO Add grid structure for product icons -->
       <img id="landing-image" src="https://i.imgur.com/dC3F6tY.jpg?1" alt="GitHub" title="source: imgur.com" />
       <div class=" container-fluid col-md-12">
-        <div id="productList" class="row"></div>
+        <div id="productList" class="row">
+        </div>
       </div>
     </main>
     <footer>

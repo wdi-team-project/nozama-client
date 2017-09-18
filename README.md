@@ -18,9 +18,13 @@ Our prompt was to build Nozama, a site similar to Amazon.  We decided to act as 
 
 ## Links
 
-- Deployed Client: Coming Soon
+- [Deployed Client](https://wdi-team-project.github.io/nozama-client/)
 
 - [API Repo](https://github.com/wdi-team-project/nozama-express-api)
+
+- [Trello](https://trello.com/b/Gk8kc8GI/peach-produce)
+
+- [Google Doc](https://docs.google.com/document/d/17u0y_Ls6DwR3jYA1ZmOtVIrufHcFLOCmnxkV-dhoFUs/edit#heading=h.bm1arf1sz7vv)
 
 ## User Stories
 
