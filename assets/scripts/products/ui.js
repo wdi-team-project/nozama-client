@@ -7,13 +7,14 @@ const onAddProductSuccess = (id, title, price, img) => {
   // $('#cartContainer').append('<li>' + title + ' $ ' + price + '</li>')
 }
 
-const onAddProductFailure = (data) => {
-  console.log('failure')
+const onAddProductFailure = (error) => {
+  console.log('onAddProductFailure')
+
+  console.log(error)
 }
 
 const onShowProductSuccess = (data) => {
   console.log('onShowProductSuccess')
-  $('#login-prompt').text('Added new item to cart!')
 }
 
 const onShowProductFailure = (error) => {
@@ -24,6 +25,7 @@ const onShowCartSuccess = (data) => {
   console.log('onShowCartSuccess')
   console.log(data)
   $('#user-cart-table').remove()
+  // $('#empty-cart-btn').remove()
   // for (let i = 0; i < app.user.cart.length; i++) {
   // $('#cartContainer').append(
   //   '<li>' + app.user.cart[i].title + ' $ ' + app.user.cart[i].price + '</li>'

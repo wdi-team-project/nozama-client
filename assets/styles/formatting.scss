@@ -190,6 +190,11 @@ ul {
   margin-bottom: 10px;
 }
 
+#add-to-cart-btn {
+  position: relative;
+  margin: 85% 5% 5% 75%
+}
+
 .btn-success {
   background-color: $primary;
   border: 0;
@@ -208,6 +213,12 @@ ul {
 
 #productList {
   text-align: center;
+}
+
+#user-cart-table {
+  padding: 5px;
+  margin: 5px;
+  width: 150px;
 }
 
 // ==============================================

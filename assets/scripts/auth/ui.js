@@ -46,12 +46,13 @@ const signOutSuccess = (data) => {
   app.user = null
   console.log(data)
   console.log('ui.js signOutSuccess')
-  $('login-prompt').text('Log in to get shopping!')
+  $('#login-prompt').text('Log in to get shopping!')
   $('#show-change-pw').hide()
   $('#show-my-cart').hide()
+  $('#user-signout').hide()
+  $('#empty-cart').hide()
   $('#show-signup').show()
   $('#show-signin').show()
-  $('#user-signout').hide()
   $('#already-prompt').show()
 }
 
