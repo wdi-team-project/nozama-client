@@ -1,12 +1,10 @@
 'use strict'
 const app = require('../app.js')
+const Handlebars = require('../../handlebars-v4.0.10.js')
 
-const onAddProductSuccess = (data) => {
+const onAddProductSuccess = (id, title, price, img) => {
   console.log('onAddProductSuccess')
-  console.log(app.user.cart)
-  console.log(app.user.cart.length)
-  console.log(data)
-  $('#cartContainer').append('<li>' + app.user.cart.title + ' $ ' + app.user.cart.price + '</li>')
+  // $('#cartContainer').append('<li>' + title + ' $ ' + price + '</li>')
 }
 
 const onAddProductFailure = (data) => {
@@ -25,12 +23,28 @@ const onShowProductFailure = (error) => {
 const onShowCartSuccess = (data) => {
   console.log('onShowCartSuccess')
   console.log(data)
-  $('#cartContainer').empty()
-  for (let i = 0; i < app.user.cart.length; i++) {
-    $('#cartContainer').append(
-      '<li id="cartList">' + ' - ' + app.user.cart[i].title + ': $ ' + app.user.cart[i].price + '</li>'
-    )
+  $('#user-cart-table').remove()
+  // for (let i = 0; i < app.user.cart.length; i++) {
+  // $('#cartContainer').append(
+  //   '<li>' + app.user.cart[i].title + ' $ ' + app.user.cart[i].price + '</li>'
+  // )
+  // }
+  // HANDLEBARS REFACTOR
+  const cartData = data.user.cart
+  const createHTML = function (data) {
+    const rawTemplate = $('#cart-template').html()
+    console.log(rawTemplate)
+    const compiledTemplate = Handlebars.compile(rawTemplate)
+    console.log(compiledTemplate)
+    const context = {
+      cart: data
+    }
+    const compiledHTML = compiledTemplate(context)
+    console.log('appending HTML')
+    console.log(compiledHTML)
+    $('#cartContainer').append(compiledHTML)
   }
+  createHTML(cartData)
 }
 
 const onShowCartFailure = (error) => {
@@ -39,7 +53,12 @@ const onShowCartFailure = (error) => {
 
 const onEmptyCartSuccess = (data) => {
   $('#cartContainer').empty()
-  console.log('should be empty')
+  for (let i = 0; i < app.user.cart.length; i++) {
+    $('#cartContainer').append(
+      '<li>' + app.user.cart[i].title + ' $ ' + app.user.cart[i].price + '</li>'
+    )
+  }
+  console.log('onEmptyCartSuccess')
 }
 
 const onEmptyCartFailure = (data) => {

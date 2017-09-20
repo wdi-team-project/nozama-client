@@ -3,16 +3,15 @@ const api = require('./api.js')
 const ui = require('./ui.js')
 const app = require('../app.js')
 
-// const onGetProducts = function (event) {
-//   console.log('onGetProducts in events.js')
-//   api.getProduct()
-//     .then(ui.onGetProductsSuccess)
-//     .catch(ui.onGetProductsFailure)
-// }
+const onGetProducts = function (event) {
+  console.log('onGetProducts in events.js')
+  api.getProducts()
+    .then(ui.onGetProductsSuccess)
+    .catch(ui.onGetProductsFailure)
+}
 
 const onShowCart = function (event) {
   event.preventDefault()
-  console.log(event.target)
   console.log('onShowCart')
   const user = app.user.id
   const token = app.user.token
@@ -23,9 +22,12 @@ const onShowCart = function (event) {
 
 const onAddProduct = function (event) {
   console.log('onAddProduct')
-  console.log('product id =' + this.id)
+  console.log('product id = ' + this.id)
   event.preventDefault()
-  const id = this.id
+  const id = $(event.target).data('id')
+  const title = $(event.target).data('title')
+  const price = $(event.target).data('price')
+  const img = $(event.target).data('img')
   // const pp = function () {
   //   const productCollection = $('#productList').children()
   //   const priceLocator = productCollection.children().first().siblings().next().html()
@@ -46,16 +48,18 @@ const onAddProduct = function (event) {
   // console.log(title)
   const user = app.user.id
   const token = app.user.token
+  console.log('user:' + app.user)
+  console.log('user:' + user + 'token: ' + token)
   // console.log('Events User')
   // console.log(user)
-  api.getProduct(id)
-    .then(api.addProduct)
-    .then(ui.onAddProductSuccess)
+  api.addProduct(id, title, price, img)
+    .then(ui.onAddProductSuccess(id, title, price, img))
     .catch(ui.onAddProductFailure)
 }
 
 const onEmptyCart = function (event) {
-  console.log('Step 1: Events Start')
+  console.log('onEmptyCart')
+  const id = $(this).data('data-id')
   // event.preventDefault()
   // const data = event
   console.log('data')
@@ -65,6 +69,7 @@ const onEmptyCart = function (event) {
     .catch(ui.onAddProductFailure)
 }
 module.exports = {
+  onGetProducts,
   onShowCart,
   onAddProduct,
   onEmptyCart

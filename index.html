@@ -54,8 +54,29 @@
         <br>
         <div class="dropdown right">
           <button id="show-my-cart" type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown"><i id="shopBtn" class="fa fa-shopping-cart fa-2x">My Cart</i></button>
-          <ul id="cartContainer" class="dropdown-menu dropdown-menu-right">
-          </ul>
+<!--  TODO make #cart-template -->
+          <div class="user-cart dropdown-menu dropdown-menu-right" id="cartContainer">
+          <script id="cart-template" type="text/x-handlebars-template">
+            <table class="user-cart" id="user-cart-table">
+            <thead>
+              <tr>
+                <th>Item</th>
+                <th>Price</th>
+                <!-- <th>Quantity</th> -->
+                <!-- <th>Remove</th> -->
+                <!-- <th>Change Quantity</th> -->
+              </tr>
+            </thead>
+            <tbody>
+              {{#each cart}}
+              <tr id="{{data-id}}">
+              <td>{{title}}</td>
+              <td>{{price}}</td>
+              </tr>
+              {{/each}}
+            </tbody>
+          </table>
+        </script>
         </div>
       </div>
     </nav>
@@ -114,5 +135,6 @@
         </div>
       </div>
     </footer>
+    <script src="assets/handlebars-v4.0.10.js"></script>
   </body>
 </html>
