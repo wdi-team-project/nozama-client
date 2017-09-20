@@ -25,7 +25,9 @@ const getProducts = function (data) {
             '<img class="productListed" src="' + img + '">' + '<br>' +
             '</div>' +
             '<p class="productPrice">$ ' + price + '</p>' +
-            '<button id="' + id + '" class="add-to-cart-btn btn center">Add to Cart</button>' +
+            '<button id="' + id +
+            '" data-id="' + id + '" data-title="' + title + '" data-img="' + img + '" data-price="' + price +
+            '" class="add-to-cart-btn btn center">Add to Cart</button>' +
         '</div>'
         )
       }
@@ -48,12 +50,9 @@ const getProduct = (id) => {
 }
 
 // Add Product to user Cart
-const addProduct = (data) => {
-  console.log(data)
+const addProduct = (productId, title, price, img) => {
   console.log('addProduct')
-  console.log('title: ' + data.product.title + ' price: ' + data.product.price)
-  const title = data.product.title
-  const price = data.product.price
+  console.log('title: ' + title + ' price: ' + price)
   return $.ajax({
     url: app.host + '/users/' + app.user.id,
     method: 'PATCH',
@@ -70,6 +69,7 @@ const addProduct = (data) => {
 }
 
 const showCart = (user, token) => {
+  console.log('showCart in api.js')
   console.log(user)
   return $.ajax({
     url: app.host + '/users/' + user,
