@@ -21,6 +21,7 @@
         <button class="btn-success"  type="button" name="show-signup-button" id="show-signup">Create an Account</button>
         <p id="already-prompt">Already have an account? </p>
         <button class="btn-success" type="button" name="show-signin-button" id="show-signin">Sign in</button>
+        <h5 id="shopping-prompt"></h5>
         <!-- Sign up Field -->
         <form class="user-signup">
           <h4>Sign Up</h4>
@@ -38,7 +39,6 @@
         </form>
         <!-- Logout form -->
         <form class="user-signout" id="user-signout">
-          <h4>Sign Out</h4>
           <button class="btn-success" type="submit" value="Sign Out!" id="sign-out-button">Sign Out</button>
         </form>
         <!-- Change password form -->
@@ -49,12 +49,13 @@
           <input name="credentials[newpassword]" type="password" value="" placeholder="New Password">
           <button class="btn-success" type="submit" value="Change Password" id="change-pw-button">Change Password</button>
         </form>
+        <button id="empty-cart" class="user-cart btn-success" type="button">Empty Cart</button>
+
         <!-- Show shopping cart -->
-        <button id="empty-cart" class="btn-success" type="button">Empty Cart</button>
         <br>
         <div class="dropdown right">
           <button id="show-my-cart" type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown"><i id="shopBtn" class="fa fa-shopping-cart fa-2x">My Cart</i></button>
-<!--  TODO make #cart-template -->
+<!-- Shopping cart -->
           <div class="user-cart dropdown-menu dropdown-menu-right" id="cartContainer">
           <script id="cart-template" type="text/x-handlebars-template">
             <table class="user-cart" id="user-cart-table">
@@ -75,8 +76,11 @@
               </tr>
               {{/each}}
             </tbody>
+            <tfoot>
+            </tfoot>
           </table>
         </script>
+        <button id="empty-cart-btn" class="user-cart btn-success" type="button">Empty Cart</button>
         </div>
       </div>
     </nav>

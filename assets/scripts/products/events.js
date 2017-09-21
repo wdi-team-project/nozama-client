@@ -22,6 +22,7 @@ const onShowCart = function (event) {
 
 const onAddProduct = function (event) {
   console.log('onAddProduct')
+  console.log('user: ' + app.user)
   console.log('product id = ' + this.id)
   event.preventDefault()
   const id = $(event.target).data('id')
@@ -46,15 +47,19 @@ const onAddProduct = function (event) {
   // const title = pt()
   // console.log('got here 3')
   // console.log(title)
-  const user = app.user.id
-  const token = app.user.token
-  console.log('user:' + app.user)
-  console.log('user:' + user + 'token: ' + token)
-  // console.log('Events User')
-  // console.log(user)
-  api.addProduct(id, title, price, img)
-    .then(ui.onAddProductSuccess(id, title, price, img))
-    .catch(ui.onAddProductFailure)
+  if (app.user === undefined) {
+    $('#shopping-prompt').text('You must log in to add items to your cart!')
+  } else {
+    const user = app.user.id
+    const token = app.user.token
+    console.log('user:' + app.user)
+    console.log('user:' + user + 'token: ' + token)
+    // console.log('Events User')
+    // console.log(user)
+    api.addProduct(id, title, price, img)
+      .then(ui.onAddProductSuccess(id, title, price, img))
+      .catch(ui.onAddProductFailure)
+  }
 }
 
 const onEmptyCart = function (event) {

@@ -47,7 +47,7 @@ $(() => {
 
   $(document).on('click', '.add-to-cart-btn', productEvents.onAddProduct)
   $('#show-my-cart').on('click', productEvents.onShowCart)
-  $('#empty-cart').on('click', productEvents.onEmptyCart)
+  $(document).on('click', '#empty-cart-btn', productEvents.onEmptyCart)
 })
 
 // const pp = function () {
