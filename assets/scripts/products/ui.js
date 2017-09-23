@@ -71,21 +71,37 @@ const onEmptyCartFailure = (data) => {
 const onCreateProductSuccess = (data) => {
   console.log('Created Product')
   $('.productBorder').remove()
+  $('#create-alert').children().remove()
+  $('#create-alert').append(
+    '<p> Product Successfully Added </p>'
+  )
   Api.getProducts()
 }
 
 const onCreateProductFailure = (data) => {
   console.log('Failed to Create Product')
+  $('#create-alert').children().remove()
+  $('#create-alert').append(
+    '<p>Please Correctly Fill All Fields</p>'
+  )
 }
 
 const onDeleteProductSuccess = (data) => {
   console.log('Delete Successfull')
+  $('#delete-alert').children().remove()
+  $('#delete-alert').append(
+    '<p> Product Successfully Deleted </p>'
+  )
   $('.productBorder').remove()
   Api.getProducts()
 }
 
 const onDeleteProductFailure = (data) => {
   console.log('Delete Failed')
+  $('#delete-alert').children().remove()
+  $('#delete-alert').append(
+    '<p>Please Provide Valid Product Id</p>'
+  )
 }
 
 module.exports = {

@@ -87,9 +87,9 @@
           Create Product
         </button>
         <div class="dropdown-menu">
+          <div id='create-alert'></div>
           <form id="create-product">
           <fieldset>
-            <legend>Create Product</legend>
             <input id='pTitle' type="text" name="credentials[title]" value="" placeholder="Product Title">
             <input id='pPrice' type="text" name="credentials[price]" value="" placeholder="Product Price (ex. 1.99)">
             <input id='pLink' type="text" name="credentials[imageLink]" value="" placeholder="Link to Image">
@@ -104,9 +104,9 @@
           Delete Product
         </button>
         <div class="dropdown-menu">
+          <div id="delete-alert"></div>
           <form id="remove-product">
           <fieldset>
-            <legend>Create Product</legend>
             <input id='pId' type="text" name="credentials[pId]" value="" placeholder="Product Id">
             <input id="delete-product" class="sub-button" type="submit" name="submit" value="Delete Product">
           </fieldset>
