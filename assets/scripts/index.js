@@ -16,6 +16,8 @@ $(() => {
   $('.change-password').hide()
   $('#show-my-cart').hide()
   $('#empty-cart').hide()
+  $('#create-field').hide()
+  $('#delete-field').hide()
 
   $('.productBtn').on('load', productEvents.onGetProducts())
 

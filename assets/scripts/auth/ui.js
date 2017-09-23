@@ -29,6 +29,8 @@ const signInSuccess = (data) => {
   $('#show-change-pw').show()
   $('#show-my-cart').show()
   $('#empty-cart').show()
+  $('#create-field').show()
+  $('#delete-field').show()
 }
 
 const signInFail = (error) => {
@@ -54,6 +56,8 @@ const signOutSuccess = (data) => {
   $('#show-signup').show()
   $('#show-signin').show()
   $('#already-prompt').show()
+  $('#create-field').hide()
+  $('#delete-field').hide()
 }
 
 const signOutFail = (error) => {
