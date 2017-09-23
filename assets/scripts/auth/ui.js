@@ -87,13 +87,14 @@ const changePasswordSuccess = (data) => {
 
 const changePasswordFail = (error) => {
   console.error(error)
-  $('#login-prompt').text('Could not change password. Please try again.')
+  $('#login-prompt').text('Original Password Incorrect. Please try again.')
   $('.change-password').hide()
   $('#show-change-pw').show()
   $('input').val('')
 }
 
 const passwordMatchFail = () => {
+  $('#login-prompt').text('')
   $('#sign-up-alert').children().remove()
   $('#sign-up-alert').append(
     '<p> Password Confirmation Incorrect </p>'
