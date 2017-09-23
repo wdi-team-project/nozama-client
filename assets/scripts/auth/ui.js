@@ -10,6 +10,7 @@ const signUpSuccess = (data) => {
   $('.user-signin').show()
   $('#show-signin').hide()
   $('#show-signup').show()
+  $('#sign-up-alert').children().remove()
   $('input').val('')
 }
 
@@ -93,6 +94,13 @@ const changePasswordFail = (error) => {
   $('input').val('')
 }
 
+const passwordMatchFail = () => {
+  $('#sign-up-alert').children().remove()
+  $('#sign-up-alert').append(
+    '<p> Password Confirmation Incorrect </p>'
+  )
+}
+
 module.exports = {
   signUpSuccess,
   signUpFail,
@@ -101,5 +109,6 @@ module.exports = {
   signOutSuccess,
   signOutFail,
   changePasswordSuccess,
-  changePasswordFail
+  changePasswordFail,
+  passwordMatchFail
 }

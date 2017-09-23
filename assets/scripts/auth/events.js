@@ -9,9 +9,13 @@ const onSignUp = function (event) {
   event.preventDefault()
   console.log('onSignUp')
   const data = getFormFields(event.target)
-  api.signUp(data)
-    .done(ui.signUpSuccess)
-    .fail(ui.signUpFail)
+  if (data.credentials.password === data.credentials.password_confirmation) {
+    api.signUp(data)
+      .done(ui.signUpSuccess)
+      .fail(ui.signUpFail)
+  } else {
+    ui.passwordMatchFail()
+  }
 }
 
 // GET (ash - signin)
