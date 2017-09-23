@@ -20,6 +20,7 @@ const getProducts = function (data) {
           '<div id="" class="productBorder col-md-2 center">' +
             '<div>' +
             '<h3 class="productTitle">' + title + '</h3>' + '<br>' +
+            '<p>' + id + '</p>' +
             '</div>' +
             '<div>' +
             '<img class="productListed" src="' + img + '">' + '<br>' +
@@ -98,10 +99,28 @@ const emptyCart = (data) => {
   })
 }
 
+const createProduct = function (titleText, priceText, linkText) {
+  return $.ajax({
+    url: app.host + '/products',
+    method: 'POST',
+    headers: {
+      Authorization: 'Token token=' + app.user.token
+    },
+    data: {
+      'product': {
+        'title': titleText,
+        'price': priceText,
+        'imageLink': linkText
+      }
+    }
+  })
+}
+
 module.exports = {
   getProducts,
   getProduct,
   addProduct,
   showCart,
-  emptyCart
+  emptyCart,
+  createProduct
 }

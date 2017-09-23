@@ -83,6 +83,22 @@
         <button id="empty-cart-btn" class="user-cart btn-success" type="button">Empty Cart</button>
         </div>
       </div>
+      <div class="btn-group">
+        <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Create Product
+        </button>
+        <div class="dropdown-menu">
+          <form id="create-product">
+          <fieldset>
+            <legend>Create Product</legend>
+            <input id='pTitle' type="text" name="credentials[title]" value="" placeholder="Product Title">
+            <input id='pPrice' type="text" name="credentials[price]" value="" placeholder="Product Price (ex. 1.99)">
+            <input id='pLink' type="text" name="credentials[imageLink]" value="" placeholder="Link to Image">
+            <input id="add-product" class="sub-button" type="submit" name="submit" value="Add Product">
+          </fieldset>
+        </form>
+        </div>
+      </div>
     </nav>
     <main>
       <div id="header-container">

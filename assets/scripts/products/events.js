@@ -73,9 +73,21 @@ const onEmptyCart = function (event) {
     .then(ui.onAddProductSuccess)
     .catch(ui.onAddProductFailure)
 }
+
+const onCreateProduct = function (event) {
+  event.preventDefault()
+  const titleText = $('#pTitle').val()
+  const priceText = $('#pPrice').val()
+  const linkText = $('#pLink').val()
+  api.createProduct(titleText, priceText, linkText)
+    .then(ui.onCreateProductSuccess)
+    .catch(ui.onCreateProductFailure)
+}
+
 module.exports = {
   onGetProducts,
   onShowCart,
   onAddProduct,
-  onEmptyCart
+  onEmptyCart,
+  onCreateProduct
 }

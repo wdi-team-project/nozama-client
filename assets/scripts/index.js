@@ -48,6 +48,8 @@ $(() => {
   $(document).on('click', '.add-to-cart-btn', productEvents.onAddProduct)
   $('#show-my-cart').on('click', productEvents.onShowCart)
   $(document).on('click', '#empty-cart-btn', productEvents.onEmptyCart)
+
+  $('#create-product').on('submit', productEvents.onCreateProduct)
 })
 
 // const pp = function () {

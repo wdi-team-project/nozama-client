@@ -67,6 +67,14 @@ const onEmptyCartFailure = (data) => {
   console.log('shit')
 }
 
+const onCreateProductSuccess = (data) => {
+  console.log('Created Product')
+}
+
+const onCreateProductFailure = (data) => {
+  console.log('Failed to Create Product')
+}
+
 module.exports = {
   onAddProductSuccess,
   onAddProductFailure,
@@ -75,5 +83,7 @@ module.exports = {
   onShowCartSuccess,
   onShowCartFailure,
   onEmptyCartSuccess,
-  onEmptyCartFailure
+  onEmptyCartFailure,
+  onCreateProductSuccess,
+  onCreateProductFailure
 }
