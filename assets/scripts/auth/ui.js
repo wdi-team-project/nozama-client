@@ -17,9 +17,8 @@ const signUpSuccess = (data) => {
 const signUpFail = (error) => {
   console.error(error)
   console.log('ui.js signUpFail')
-  $('#login-prompt').text('Could not make account. Passwords did not match or username taken. Please try again.')
-  $('.user-signup').hide()
-  $('#show-signup').show()
+  $('#login-prompt').text('Could not make account. Username Taken. Please try again.')
+  $('#sign-up-alert').children().remove()
   $('input').val('')
 }
 
