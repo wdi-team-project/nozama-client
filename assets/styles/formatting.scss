@@ -190,6 +190,11 @@ ul {
   margin-bottom: 10px;
 }
 
+#add-to-cart-btn {
+  position: relative;
+  margin: 85% 5% 5% 75%
+}
+
 .btn-success {
   background-color: $primary;
   border: 0;
@@ -208,6 +213,27 @@ ul {
 
 #productList {
   text-align: center;
+}
+
+#user-cart-table {
+  padding: 5px;
+  margin: 5px;
+  width: 150px;
+}
+
+#create-field, #delete-field {
+  margin: 10px;
+}
+
+#add-product {
+  width: 80%;
+  background-image: url('https://i.imgur.com/EaVRYPat.png');
+}
+
+#delete-product {
+  width: 80%;
+  background-image: url('https://i.imgur.com/x9ymwxc.png?3');
+
 }
 
 // ==============================================
