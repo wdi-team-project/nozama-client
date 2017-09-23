@@ -3,7 +3,6 @@ const app = require('../app.js')
 
 // GET products
 const getProducts = function (data) {
-  console.log(data)
   return $.ajax({
     method: 'GET',
     url: app.host + '/products',
@@ -38,7 +37,6 @@ const getProducts = function (data) {
 }
 
 const getProduct = (id) => {
-  console.log('getProduct')
   return $.ajax({
     url: app.host + '/products/' + id,
     headers: {'header': 'Content-Type: application/json'},
@@ -53,8 +51,6 @@ const getProduct = (id) => {
 
 // Add Product to user Cart
 const addProduct = (productId, title, price, img) => {
-  console.log('addProduct')
-  console.log('title: ' + title + ' price: ' + price)
   return $.ajax({
     url: app.host + '/users/' + app.user.id,
     method: 'PATCH',
@@ -71,8 +67,6 @@ const addProduct = (productId, title, price, img) => {
 }
 
 const showCart = (user, token) => {
-  console.log('showCart in api.js')
-  console.log(user)
   return $.ajax({
     url: app.host + '/users/' + user,
     method: 'GET',
@@ -89,7 +83,6 @@ const showCart = (user, token) => {
 }
 
 const emptyCart = (data) => {
-  console.log(data)
   return $.ajax({
     url: app.host + '/users/' + app.user.id + '/cart',
     method: 'PATCH',

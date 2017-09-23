@@ -5,9 +5,7 @@ const ui = require('./ui.js')
 
 // POST (ash - signup)
 const onSignUp = function (event) {
-  console.log('onSignUp1')
   event.preventDefault()
-  console.log('onSignUp')
   const data = getFormFields(event.target)
   if (data.credentials.password === data.credentials.password_confirmation) {
     api.signUp(data)
@@ -21,7 +19,6 @@ const onSignUp = function (event) {
 // GET (ash - signin)
 const onSignIn = function (event) {
   event.preventDefault()
-  console.log('onSignIn')
   const data = getFormFields(event.target)
   api.signIn(data)
     .done(ui.signInSuccess)
@@ -31,7 +28,6 @@ const onSignIn = function (event) {
 // DELETE (will - signout)
 const onSignOut = function (event) {
   event.preventDefault()
-  console.log('onSignOut')
   api.signOut()
     .done(ui.signOutSuccess)
     .fail(ui.signOutSuccess)
@@ -40,9 +36,7 @@ const onSignOut = function (event) {
 // PATCH (will - changepw)
 const onChangePassword = function (event) {
   event.preventDefault()
-  console.log('onChangePassword')
   const data = getFormFields(event.target)
-  console.log(data)
   api.changePassword(data)
     .done(ui.changePasswordSuccess)
     .fail(ui.changePasswordFail)

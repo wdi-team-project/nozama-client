@@ -4,7 +4,6 @@ const app = require('../app.js')
 // POST (signup)
 const signUpSuccess = (data) => {
   app.user = data.user
-  console.log('ui.js signUpSuccess')
   $('#login-prompt').text('Created user ' + data.user.email + '. Sign in to start shopping!')
   $('.user-signup').hide()
   $('.user-signin').show()
@@ -16,7 +15,6 @@ const signUpSuccess = (data) => {
 
 const signUpFail = (error) => {
   console.error(error)
-  console.log('ui.js signUpFail')
   $('#login-prompt').text('Could not make account. Username Taken. Please try again.')
   $('#sign-up-alert').children().remove()
   $('input').val('')
@@ -25,8 +23,6 @@ const signUpFail = (error) => {
 // GET (signin)
 const signInSuccess = (data) => {
   app.user = data.user
-  console.log(data)
-  console.log('ui.js signInSuccess')
   $('#login-prompt').text('Welcome ' + data.user.email + '!')
   $('.user-signin').hide()
   $('.user-signout').show()
@@ -42,7 +38,6 @@ const signInSuccess = (data) => {
 
 const signInFail = (error) => {
   console.error(error)
-  console.log('ui.js signInFail')
   $('#login-prompt').text('Login failed. Email/password combination not found. Please try again')
   $('.user-signin').hide()
   $('#show-signin').show()
@@ -54,8 +49,6 @@ const signInFail = (error) => {
 // DELETE (signout)
 const signOutSuccess = (data) => {
   app.user = null
-  console.log(data)
-  console.log('ui.js signOutSuccess')
   $('#login-prompt').text('Log in to get shopping!')
   $('#show-change-pw').hide()
   $('#show-my-cart').hide()
@@ -76,7 +69,6 @@ const signOutFail = (error) => {
 // PATCH (changepw)
 
 const changePasswordSuccess = (data) => {
-  console.log('ui.js changePasswordSuccess')
   $('#login-prompt').text('Password successfully changed. Signed in as ' + app.user.email)
   $('.change-password').hide()
   $('#show-change-pw').show()
