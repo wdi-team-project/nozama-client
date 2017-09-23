@@ -14,6 +14,8 @@
 
 Welcome to the Front End repository for our third project with GA, our team project.  We all learned quite a lot throught the process.  It was a great team effort and we look forward to continue working to really polish it up.
 
+As it stands the site is both user and admin facing with the ability to add products to and empty cart as well as create and delete products from the site.  Our next steps will be to seperate the two.
+
 Our prompt was to build Nozama, a site similar to Amazon.  We decided to act as though we were amazon rolling our a new food shopping piece of their site since they accquired Whole Foods.  We named it Peach.
 
 ## Links
@@ -107,3 +109,9 @@ Our prompt was to build Nozama, a site similar to Amazon.  We decided to act as 
 - Need to Integrate stripe
 - Need smoother/cleaner user Interactions
 - Function getProducts should be refactored and modularized btwn events.js api.js and ui.js. There is ui stuff in the api file
+- Seperate User/Admin Actions
+
+## Installation Instructions
+
+If you'd like to fork/clone install dependencies with:
+- `npm install`
