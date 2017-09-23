@@ -84,10 +84,19 @@ const onCreateProduct = function (event) {
     .catch(ui.onCreateProductFailure)
 }
 
+const onDeleteProduct = function (event) {
+  event.preventDefault()
+  const idText = $('#pId').val()
+  api.deleteProduct(idText)
+    .then(ui.onDeleteProductSuccess)
+    .catch(ui.onDeleteProductFailure)
+}
+
 module.exports = {
   onGetProducts,
   onShowCart,
   onAddProduct,
   onEmptyCart,
-  onCreateProduct
+  onCreateProduct,
+  onDeleteProduct
 }

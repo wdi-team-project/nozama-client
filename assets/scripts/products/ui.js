@@ -75,6 +75,14 @@ const onCreateProductFailure = (data) => {
   console.log('Failed to Create Product')
 }
 
+const onDeleteProductSuccess = (data) => {
+  console.log('Delete Successfull')
+}
+
+const onDeleteProductFailure = (data) => {
+  console.log('Delete Failed')
+}
+
 module.exports = {
   onAddProductSuccess,
   onAddProductFailure,
@@ -85,5 +93,7 @@ module.exports = {
   onEmptyCartSuccess,
   onEmptyCartFailure,
   onCreateProductSuccess,
-  onCreateProductFailure
+  onCreateProductFailure,
+  onDeleteProductSuccess,
+  onDeleteProductFailure
 }

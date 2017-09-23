@@ -50,6 +50,7 @@ $(() => {
   $(document).on('click', '#empty-cart-btn', productEvents.onEmptyCart)
 
   $('#create-product').on('submit', productEvents.onCreateProduct)
+  $('#remove-product').on('submit', productEvents.onDeleteProduct)
 })
 
 // const pp = function () {

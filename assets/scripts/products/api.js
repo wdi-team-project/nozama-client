@@ -20,6 +20,7 @@ const getProducts = function (data) {
           '<div id="" class="productBorder col-md-2 center">' +
             '<div>' +
             '<h3 class="productTitle">' + title + '</h3>' + '<br>' +
+            '<p>' + 'Product Id' + '</p>' +
             '<p>' + id + '</p>' +
             '</div>' +
             '<div>' +
@@ -116,11 +117,22 @@ const createProduct = function (titleText, priceText, linkText) {
   })
 }
 
+const deleteProduct = function (idText) {
+  return $.ajax({
+    url: app.host + '/products/' + idText,
+    method: 'DELETE',
+    headers: {
+      Authorization: 'Token token=' + app.user.token
+    }
+  })
+}
+
 module.exports = {
   getProducts,
   getProduct,
   addProduct,
   showCart,
   emptyCart,
-  createProduct
+  createProduct,
+  deleteProduct
 }
