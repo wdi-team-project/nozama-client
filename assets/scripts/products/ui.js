@@ -1,6 +1,7 @@
 'use strict'
 const app = require('../app.js')
 const Handlebars = require('../../handlebars-v4.0.10.js')
+const Api = require('./api.js')
 
 const onAddProductSuccess = (id, title, price, img) => {
   console.log('onAddProductSuccess')
@@ -69,6 +70,8 @@ const onEmptyCartFailure = (data) => {
 
 const onCreateProductSuccess = (data) => {
   console.log('Created Product')
+  $('.productBorder').remove()
+  Api.getProducts()
 }
 
 const onCreateProductFailure = (data) => {
@@ -77,6 +80,8 @@ const onCreateProductFailure = (data) => {
 
 const onDeleteProductSuccess = (data) => {
   console.log('Delete Successfull')
+  $('.productBorder').remove()
+  Api.getProducts()
 }
 
 const onDeleteProductFailure = (data) => {
