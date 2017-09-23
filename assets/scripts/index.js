@@ -23,7 +23,6 @@ $(() => {
 
   $('#show-signup').click(function () {
     $('.user-signup').show()
-    $('#show-signin').hide()
     $('#show-signup').hide()
     $('#already-prompt').hide()
   })

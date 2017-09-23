@@ -75,6 +75,7 @@ const onCreateProductSuccess = (data) => {
   $('#create-alert').append(
     '<p> Product Successfully Added </p>'
   )
+  $('input').val('')
   Api.getProducts()
 }
 
@@ -93,6 +94,7 @@ const onDeleteProductSuccess = (data) => {
     '<p> Product Successfully Deleted </p>'
   )
   $('.productBorder').remove()
+  $('input').val('')
   Api.getProducts()
 }
 

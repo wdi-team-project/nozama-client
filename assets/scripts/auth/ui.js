@@ -8,6 +8,9 @@ const signUpSuccess = (data) => {
   $('#login-prompt').text('Created user ' + data.user.email + '. Sign in to start shopping!')
   $('.user-signup').hide()
   $('.user-signin').show()
+  $('#show-signin').hide()
+  $('#show-signup').show()
+  $('input').val('')
 }
 
 const signUpFail = (error) => {
@@ -16,6 +19,7 @@ const signUpFail = (error) => {
   $('#login-prompt').text('Could not make account. Passwords did not match or username taken. Please try again.')
   $('.user-signup').hide()
   $('#show-signup').show()
+  $('input').val('')
 }
 
 // GET (signin)
@@ -26,11 +30,14 @@ const signInSuccess = (data) => {
   $('#login-prompt').text('Welcome ' + data.user.email + '!')
   $('.user-signin').hide()
   $('.user-signout').show()
+  $('.user-signup').hide()
   $('#show-change-pw').show()
   $('#show-my-cart').show()
   $('#empty-cart').show()
   $('#create-field').show()
   $('#delete-field').show()
+  $('#show-signup').hide()
+  $('input').val('')
 }
 
 const signInFail = (error) => {
@@ -41,6 +48,7 @@ const signInFail = (error) => {
   $('#show-signin').show()
   $('#show-signup').show()
   $('#already-prompt').show()
+  $('input').val('')
 }
 
 // DELETE (signout)
@@ -58,6 +66,7 @@ const signOutSuccess = (data) => {
   $('#already-prompt').show()
   $('#create-field').hide()
   $('#delete-field').hide()
+  $('input').val('')
 }
 
 const signOutFail = (error) => {
@@ -70,9 +79,10 @@ const changePasswordSuccess = (data) => {
   console.log('ui.js changePasswordSuccess')
   $('#login-prompt').text('Password successfully changed. Signed in as ' + app.user.email)
   $('.change-password').hide()
-  $('.show-change-pw').show()
+  $('#show-change-pw').show()
   $('.user-signout').show()
   $('#show-my-cart').show()
+  $('input').val('')
 }
 
 const changePasswordFail = (error) => {
@@ -80,6 +90,7 @@ const changePasswordFail = (error) => {
   $('#login-prompt').text('Could not change password. Please try again.')
   $('.change-password').hide()
   $('#show-change-pw').show()
+  $('input').val('')
 }
 
 module.exports = {
