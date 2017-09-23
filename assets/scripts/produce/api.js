@@ -5,7 +5,6 @@ const config = require('../config.js')
 
 // GET products
 const getProduct = function (data) {
-  console.log(data)
   return $.ajax({
     method: 'GET',
     url: app.host + '/products',

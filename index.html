@@ -25,6 +25,7 @@
         <!-- Sign up Field -->
         <form class="user-signup">
           <h4>Sign Up</h4>
+          <div id="sign-up-alert"></div>
           <input name="credentials[email]" type="text" value="" placeholder="Email">
           <input name="credentials[password]" type="password" value="" placeholder="Password">
           <input name="credentials[password_confirmation]" type="password" value="" placeholder="Re-enter Password">
@@ -49,7 +50,6 @@
           <input name="credentials[newpassword]" type="password" value="" placeholder="New Password">
           <button class="btn-success" type="submit" value="Change Password" id="change-pw-button">Change Password</button>
         </form>
-        <button id="empty-cart" class="user-cart btn-success" type="button">Empty Cart</button>
 
         <!-- Show shopping cart -->
         <br>
@@ -83,6 +83,39 @@
         <button id="empty-cart-btn" class="user-cart btn-success" type="button">Empty Cart</button>
         </div>
       </div>
+      <div id="create-field" class="btn-group">
+        <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Create Product
+        </button>
+        <div class="dropdown-menu">
+          <div id='create-alert'></div>
+          <form id="create-product">
+          <fieldset>
+            <input id='pTitle' type="text" name="credentials[title]" value="" placeholder="Product Title">
+            <input id='pPrice' type="text" name="credentials[price]" value="" placeholder="Product Price (ex. 1.99)">
+            <input id='pLink' type="text" name="credentials[imageLink]" value="" placeholder="Link to Image">
+            <input id="add-product" class="sub-button" type="submit" name="submit" value="Add Product">
+          </fieldset>
+        </form>
+        </div>
+      </div>
+
+      <div id="delete-field" class="btn-group">
+        <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Delete Product
+        </button>
+        <div class="dropdown-menu">
+          <div id="delete-alert"></div>
+          <form id="remove-product">
+          <fieldset>
+            <input id='pId' type="text" name="credentials[pId]" value="" placeholder="Product Id">
+            <input id="delete-product" class="sub-button" type="submit" name="submit" value="Delete Product">
+          </fieldset>
+        </form>
+        </div>
+      </div>
+
+
     </nav>
     <main>
       <div id="header-container">

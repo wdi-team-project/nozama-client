@@ -3,7 +3,6 @@ const app = require('../app.js')
 
 // GET products
 const getProducts = function (data) {
-  console.log(data)
   return $.ajax({
     method: 'GET',
     url: app.host + '/products',
@@ -20,6 +19,8 @@ const getProducts = function (data) {
           '<div id="" class="productBorder col-md-2 center">' +
             '<div>' +
             '<h3 class="productTitle">' + title + '</h3>' + '<br>' +
+            '<p>' + 'Product Id' + '</p>' +
+            '<p>' + id + '</p>' +
             '</div>' +
             '<div>' +
             '<img class="productListed" src="' + img + '">' + '<br>' +
@@ -36,7 +37,6 @@ const getProducts = function (data) {
 }
 
 const getProduct = (id) => {
-  console.log('getProduct')
   return $.ajax({
     url: app.host + '/products/' + id,
     headers: {'header': 'Content-Type: application/json'},
@@ -51,8 +51,6 @@ const getProduct = (id) => {
 
 // Add Product to user Cart
 const addProduct = (productId, title, price, img) => {
-  console.log('addProduct')
-  console.log('title: ' + title + ' price: ' + price)
   return $.ajax({
     url: app.host + '/users/' + app.user.id,
     method: 'PATCH',
@@ -69,8 +67,6 @@ const addProduct = (productId, title, price, img) => {
 }
 
 const showCart = (user, token) => {
-  console.log('showCart in api.js')
-  console.log(user)
   return $.ajax({
     url: app.host + '/users/' + user,
     method: 'GET',
@@ -87,7 +83,6 @@ const showCart = (user, token) => {
 }
 
 const emptyCart = (data) => {
-  console.log(data)
   return $.ajax({
     url: app.host + '/users/' + app.user.id + '/cart',
     method: 'PATCH',
@@ -98,10 +93,39 @@ const emptyCart = (data) => {
   })
 }
 
+const createProduct = function (titleText, priceText, linkText) {
+  return $.ajax({
+    url: app.host + '/products',
+    method: 'POST',
+    headers: {
+      Authorization: 'Token token=' + app.user.token
+    },
+    data: {
+      'product': {
+        'title': titleText,
+        'price': priceText,
+        'imageLink': linkText
+      }
+    }
+  })
+}
+
+const deleteProduct = function (idText) {
+  return $.ajax({
+    url: app.host + '/products/' + idText,
+    method: 'DELETE',
+    headers: {
+      Authorization: 'Token token=' + app.user.token
+    }
+  })
+}
+
 module.exports = {
   getProducts,
   getProduct,
   addProduct,
   showCart,
-  emptyCart
+  emptyCart,
+  createProduct,
+  deleteProduct
 }
