@@ -1,5 +1,5 @@
 'use strict'
 
 module.exports = {
-  host: 'http://localhost:4741'
+  host: 'https://limitless-journey-76568.herokuapp.com'
 }
