@@ -2,7 +2,7 @@
 
 const config = {
   apiOrigins: {
-    production: 'https://limitless-journey-76568.herokuapp.com'
+    production: 'https://aim-application-api.herokuapp.com'
   }
 }
 
