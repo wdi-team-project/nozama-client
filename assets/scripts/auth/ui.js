@@ -11,6 +11,8 @@ const signUpSuccess = (data) => {
   $('#show-signup').show()
   $('#sign-up-alert').children().remove()
   $('input').val('')
+  $('#show-my-cart').show()
+
 }
 
 const signUpFail = (error) => {
