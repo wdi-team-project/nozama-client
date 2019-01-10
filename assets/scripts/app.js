@@ -1,5 +1,5 @@
 'use strict'
 
 module.exports = {
-  host: 'https://limitless-journey-76568.herokuapp.com'
+  host: 'https://aim-application-api.herokuapp.com'
 }

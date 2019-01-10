@@ -4,7 +4,7 @@ const Handlebars = require('../../handlebars-v4.0.10.js')
 const Api = require('./api.js')
 
 const onAddProductSuccess = (id, title, price, img) => {
-  // $('#cartContainer').append('<li>' + title + ' $ ' + price + '</li>')
+  $('#cartContainer').append('<li>' + title + ' $ ' + price + '</li>')
 }
 
 const onAddProductFailure = (error) => {
