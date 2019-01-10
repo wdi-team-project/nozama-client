@@ -1,4 +1,8 @@
 # Nozama - Front End Client
+UPDATED 2019:
+  <a href="https://aimeelynnramirez.github.io/nozama-client">https://aimeelynnramirez.github.io/nozama-client</a>
+  - [Deployed Client](https://aimeelynnramirez.github.io/nozama-client)
+  - [Deployed API](https://aim-application-api.herokuapp.com/)
 
 <p align="center">
   <b>Team Project By: </b><br><br>
